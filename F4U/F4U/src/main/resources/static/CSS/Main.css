@@ -1,0 +1,32 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/* ALL */
+:root {
+    --CardBackground: rgb(244, 244, 244);
+    --CardGradient: #b7b7b7;
+    --CardShadow: #d6d6d6;
+    --TextBK: Black;
+    --TextW: white;
+    --BackgroundGradient: #270b0b;
+    --NavigationBarBackground: rgb(44, 44, 44);
+    --TextGlowLB: #00f1ff;
+    --SmallCardBackground: rgb(230, 230, 230);
+    --SmallCardBackgroundGradient: #838383;
+    --SmallCardShadow: #888888;
+    --ButtonBackgroundBK: Black;
+    --ButtonBackgroundW: White;
+    --BackgroundW: White;
+    --BackgroundBK: Black;
+}
+
+* {
+    font-family: Poppins;
+    color: var(--TextBK);
+    text-decoration: none;
+    background-color: lightblue;
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
