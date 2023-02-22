@@ -11,14 +11,17 @@
 </head>
 
 <body>
-    <form>
-        <input type="text" name="email" placeholder="Email"/>
+    <div class="box">
+        <div class="log-box">Log in</div>
+     <form>
+        <input class="block" type="text" name="email" placeholder="Email"/>
         <br/><br/>
-        <input type="password" name="password" placeholder="Password"/>
+        <input class="block" type="password" name="password" placeholder="Password"/>
         <br/><br/>
-        <button>Login</button>
-    </form>
-    <div id="msg"></div>
+        <button class="block" id="log-butt">Log in</button>
+     </form> 
+    </div>
+   
 </body>
 
 <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
