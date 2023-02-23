@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- bootstrap -->
+    <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- custom -->
+    <link href="css/login.css" rel="stylesheet">
+
     <title>Register</title>
 </head>
 <body>
@@ -11,6 +17,6 @@
         <input type="password" name="password" placeholder="Password">
         <input type="submit" name="register" value="Register">
     </form>
-    <p>Already a member? <a href="login.php">Sign in</a>.</p>
+    <p>Already a member? <a href="login">Sign in</a>.</p>
 </body>
 </html>
