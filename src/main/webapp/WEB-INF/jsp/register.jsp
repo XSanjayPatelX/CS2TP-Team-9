@@ -10,13 +10,23 @@
     <title>Register</title>
 </head>
 <body>
-    <h1>Register</h1>
-    <form action="index.php" method="post">
-        <input type="text" name="username" placeholder="Username">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" name="register" value="Register">
-    </form>
-    <p>Already a member? <a href="login">Sign in</a>.</p>
+    <main>
+        <div class="box">
+            <h1 class="log-box">Register</h1>
+            <form class="form" action="" method="post">
+                <input class="block" type="text" name="First Name" placeholder="First Name">
+                <input class="block" type="text" name="Last Name" placeholder="Last Name">
+                <input class="block" type="text" name="Email" placeholder="Email">
+                <input class="block" type="text" name="Password" placeholder="Password">
+                <input class="block" type="text" name="Address Line 1" placeholder="Address Line 1">
+                <input class="block" type="text" name="Address Line 2" placeholder="Address Line 2">
+                <input class="block" type="text" name="City" placeholder="City">
+                <input class="block" type="text" name="Postcode" placeholder="Postcode">
+                <button class="block" id="log-butt">Sign Up</button>
+            </form>
+            <p class="block">Already a member?</p>
+            <button class="block" id="log-butt">Login</button>
+        </div>
+    </main>
 </body>
 </html>

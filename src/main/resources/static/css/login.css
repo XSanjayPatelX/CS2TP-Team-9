@@ -6,7 +6,7 @@
   font-size: 1.6rem;
   padding: 14px;
   background: rgb(232, 229, 229);
-  
+  text-align: center;
 }
 
 .box{
@@ -17,7 +17,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 main{
@@ -29,7 +28,7 @@ main{
 }
 
 .log-box{
-  background-color: #db4633;
+  background-color: #ffb03b;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -48,14 +47,16 @@ main{
 #log-butt{
   width: 100%;
   color: white;
-  background-color: #db4633;
+  background-color: #ffb03b;
   margin-bottom: 40px;
   font-weight: bold;
 }
+
 .form{
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: max-content;
+  gap: 10px;
 }
