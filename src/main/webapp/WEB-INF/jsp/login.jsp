@@ -11,16 +11,18 @@
 </head>
 
 <body>
-    <div class="box">
-        <div class="log-box">Log in</div>
-     <form>
-        <input class="block" type="text" name="email" placeholder="Email"/>
-        <br/><br/>
-        <input class="block" type="password" name="password" placeholder="Password"/>
-        <br/><br/>
-        <button class="block" id="log-butt">Log in</button>
-     </form> 
-    </div>
+    <main>
+        <div class="box">
+            <div class="log-box">Log in</div>
+        <form class="form">
+            <input class="block" type="text" name="email" placeholder="Email"/>
+            <br/><br/>
+            <input class="block" type="password" name="password" placeholder="Password"/>
+            <br/><br/>
+            <button class="block" id="log-butt">Log in</button>
+        </form> 
+        </div>
+    </main>
    
 </body>
 
