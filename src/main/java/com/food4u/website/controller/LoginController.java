@@ -9,4 +9,9 @@ public class LoginController {
     public String loginPage() {
         return "login";
     }
+
+    @GetMapping(value = "/register")
+    public String registerPage() {
+        return "register";
+    }
 }
