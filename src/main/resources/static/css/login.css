@@ -1,4 +1,4 @@
-.block{
+.block {
   border-radius: 20px;
   border: none;
   height: 50px;
@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-.box{
+.box {
   box-shadow: 0.5px 6px 9px rgb(202, 198, 198);
   border-radius: 20px;
   width: 700px;
@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-main{
+main {
   display:flex;
   justify-content: center;
   align-items: center;
@@ -27,24 +27,24 @@ main{
   height:100%;
 }
 
-.log-box{
+.login-box {
   background-color: #ffb03b;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- height: 100px;
- border-radius: 20px;
- font-size: 3rem;
- margin-bottom: 40px;
- font-weight: bold;
- border-bottom-left-radius: 300px 50px;
- border-bottom-right-radius: 300px 50px;
- color: white;
+  height: 100px;
+  border-radius: 20px;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  border-bottom-left-radius: 300px 50px;
+  border-bottom-right-radius: 300px 50px;
+  color: white;
 }
 
-#log-butt{
+#login-btn {
   width: 100%;
   color: white;
   background-color: #ffb03b;
@@ -52,7 +52,7 @@ main{
   font-weight: bold;
 }
 
-.form{
+.form {
   display:flex;
   flex-direction: column;
   justify-content: center;

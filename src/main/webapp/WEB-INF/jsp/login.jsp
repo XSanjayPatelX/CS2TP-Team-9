@@ -1,10 +1,7 @@
 <html>
 
 <head>
-    <!-- bootstrap -->
     <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- custom -->
     <link href="css/login.css" rel="stylesheet">
 
     <title>Login</title>
@@ -13,22 +10,20 @@
 <body>
     <main>
         <div class="box">
-            <div class="log-box">Log in</div>
-        <form class="form">
-            <input class="block" type="text" name="email" placeholder="Email"/>
-            <br/><br/>
-            <input class="block" type="password" name="password" placeholder="Password"/>
-            <br/><br/>
-            <button class="block" id="log-butt">Log in</button>
-        </form> 
+            <div class="login-box">Log in</div>
+                <form class="form">
+                    <input class="block" type="email" name="email" placeholder="Email"/>
+                    <input class="block" type="password" name="password" placeholder="Password"/>
+                    <br/>
+                    <button class="block" id="login-btn">Log in</button>
+                </form>
         </div>
     </main>
-   
+
+   <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+   <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+   <script src="js/main.js"></script>
 </body>
-
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-<script src="js/main.js"></script>
 
 </html>
