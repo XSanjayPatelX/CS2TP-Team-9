@@ -11,7 +11,7 @@
     <main>
         <div class="box">
             <div class="login-box">Register</div>
-                <form class="form" action="" method="post">
+                <form class="form" action="" method="POST">
                     <input class="block" type="text" name="first_name" placeholder="First Name">
                     <input class="block" type="text" name="last_name" placeholder="Last Name">
                     <input class="block" type="email" name="email_address" placeholder="Email">
