@@ -22,8 +22,7 @@ public class User {
 //        this.first_name = first_name;
 //    }
 
-    public String getEmail_address(String email_address) {
-        return this.email_address;
+    public void getEmail_address(String email_address) {
     }
 
     public void setEmail_address(String email_address) {
