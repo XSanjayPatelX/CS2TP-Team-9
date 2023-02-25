@@ -12,14 +12,13 @@
         <div class="box">
             <div class="login-box">Register</div>
                 <form class="form" action="" method="post">
-                    <input class="block" type="text" name="First Name" placeholder="First Name">
-                    <input class="block" type="text" name="Last Name" placeholder="Last Name">
-                    <input class="block" type="email" name="Email" placeholder="Email">
-                    <input class="block" type="password" name="Password" placeholder="Password">
-                    <input class="block" type="text" name="Address Line 1" placeholder="Address Line 1">
-                    <input class="block" type="text" name="Address Line 2" placeholder="Address Line 2">
-                    <input class="block" type="text" name="City" placeholder="City">
-                    <input class="block" type="text" name="Postcode" placeholder="Postcode">
+                    <input class="block" type="text" name="first_name" placeholder="First Name">
+                    <input class="block" type="text" name="last_name" placeholder="Last Name">
+                    <input class="block" type="email" name="email_address" placeholder="Email">
+                    <input class="block" type="password" name="password" placeholder="Password">
+                    <input class="block" type="text" name="address" placeholder="Address">
+                    <input class="block" type="text" name="city" placeholder="City">
+                    <input class="block" type="text" name="postcode" placeholder="Postcode">
                     <button class="block" id="login-btn">Sign Up</button>
                 </form>
                 <p class="block">Already a member?</p>
