@@ -4,6 +4,6 @@
 </head>
 
 <body>
-    <h2>Welcome ${email} to the site!</h2>
+    <h2>Welcome ${first_name} to the site!</h2>
 </body>
 </html>

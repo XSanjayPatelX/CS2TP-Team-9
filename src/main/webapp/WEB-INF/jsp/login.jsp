@@ -13,7 +13,7 @@
             <div class="login-box">Log in</div>
                 <form class="form" method="POST">
                     <h2>${errorMsg}</h2>
-                    <input class="block" type="email" name="email" placeholder="Email"/>
+                    <input class="block" type="email" name="email_address" placeholder="Email"/>
                     <input class="block" type="password" name="password" placeholder="Password"/>
                     <br/>
                     <button class="block" id="login-btn">Log in</button>
