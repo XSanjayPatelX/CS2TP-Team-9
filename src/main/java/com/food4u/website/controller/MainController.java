@@ -18,8 +18,13 @@ public class MainController {
         return "products";
     }
 
+    @GetMapping(value = "/login")
+    public String loginPage() {
+        return "login";
+    }
+
     @PostMapping(value = "/login")
-    public String welcomePage(ModelMap modelMap, @RequestParam String email, @RequestParam String password) {
+    public String loginSubmit(ModelMap modelMap, @RequestParam String email, @RequestParam String password) {
         if (email.equals("Admin@f4u.com") && password.equals("Root")) {
             modelMap.put("email", email);
             return "welcome";
