@@ -26,6 +26,11 @@ public class MainController {
         return "products";
     }
 
+    @GetMapping(value = "/aboutus")
+    public String aboutusPage() {
+        return "aboutus";
+    }
+
     @GetMapping(value = "/login")
     public String loginPage() {
         return "login";

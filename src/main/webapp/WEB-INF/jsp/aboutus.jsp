@@ -19,8 +19,8 @@
             </div>
             <div class="info">
                 <img src="images/logo.png" alt="Logo" width="400px" height="400px">
-                <p>"FOOD4U is a student lead oranisation with the core intension to provide the best food and customer
-                    services possible for its customers. We are a food compny which provides delicous options for
+                <p>"FOOD4U is a student lead organisation with the core intention to provide the best food and customer
+                    services possible for its customers. We are a food company which provides delicious options for
                     customers
                     who are a big fan of new foods." - Team 9</p>
             </div>
@@ -31,14 +31,14 @@
                 <h2>Our Values</h2>
             </div>
             <div class="info">
-                <p>The values at FOOD4U help shape our team for the best teamworking and serices. The three core values
+                <p>The values at FOOD4U help shape our team for the best teamwork and services. The three core values
                     include Teamwork, Openness and Innovation.</p><br>
             </div>
             <ul>
-                <li>Teamwork - We must work as part of a team, as Teamwork allows us to achive things that seem
+                <li>Teamwork - We must work as part of a team, as Teamwork allows us to achieve things that seem
                     impossible.</li><br>
-                <li>Openness - We must be open and clear with eachother to allow new ideas to blossum</li><br>
-                <li>Innoation - We all all about innovation, we contunuosly strive for excellence</li><br>
+                <li>Openness - We must be open and clear with each other to allow new ideas to blossom</li><br>
+                <li>Innovation - We all all about innovation, we continuously strive for excellence</li><br>
             </ul><br><br>
         </div>
 
@@ -49,7 +49,7 @@
             <div class="info">
                 <p>We strive to provide the best products and services to our customers while maintaining our commitment
                     to
-                    excellence. We have amaing customer reviews and are always looking for oppertunities to grow, deelop
+                    excellence. We have amazing customer reviews and are always looking for opportunities to grow, develop
                     and
                     expand or audiences.</p>
             </div>
@@ -88,7 +88,7 @@
             </div>
             <!--Review 2-->
             <div class="review2">
-                <p1>"Everything is unbelvably fresh and tasty, will be coming back soon!" - John Smith</p1>
+                <p1>"Everything is unbelievably fresh and tasty, will be coming back soon!" - John Smith</p1>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -97,7 +97,7 @@
             </div>
             <!--Review 3-->
             <div class="review3">
-                <p1>"Staff were frendly and welcoming, best cutomer support ever!"- May John</p1>
+                <p1>"Staff were friendly and welcoming, best customer support ever!"- May John</p1>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -108,7 +108,7 @@
 
         <div class="section1">
             <div class="sub-heading">
-                <h2>Our Hisory</h2>
+                <h2>Our History</h2>
             </div>
             <p>Founded in 2023, our company has been a leader in the industry. We on track to being the market leaders
                 in the food industry and are always growing and updating our vision.</p>
