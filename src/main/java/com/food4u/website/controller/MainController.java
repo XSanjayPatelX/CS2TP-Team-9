@@ -1,19 +1,20 @@
 package com.food4u.website.controller;
 
-import com.food4u.website.Entity.User;
-import com.food4u.website.Entity.UserRepository;
+import com.food4u.website.entity.User;
+import com.food4u.website.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Calendar;
 
 @Controller
 public class MainController {
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository userRepo;
 
     @GetMapping(value = "/welcome")
     public String homePage() {
@@ -32,13 +33,17 @@ public class MainController {
 
     @PostMapping(value = "/login")
     public String loginSubmit(User user, ModelMap modelMap) {
-        User s = userRepository.findByEmail(user.getEmail_address());
-        String f = s.getFirst_name();
-        if (s.getPassword().equals(user.getPassword())) {
-            modelMap.put("first_name", f);
-            return "welcome";
+
+        if (userRepo.existsByEmail(user.getEmail())) {
+            User u = userRepo.findByEmail(user.getEmail());
+
+            if (u.getPassword().equals(user.getPassword())) {
+                modelMap.put("user", u);
+                return "welcome";
+            }
         }
-        modelMap.put("errorMsg", "Please provide the correct email and password");
+
+        modelMap.put("errorMsg", "Email or password is incorrect");
         return "login";
     }
 
@@ -50,8 +55,11 @@ public class MainController {
 
     @PostMapping(value = "/register")
     public String registerSubmit(User user) {
-        user.setPassword(user.getPassword());
-        userRepository.save(user);
+        user.setPassword(user.getPassword()); // TODO: Encrypt password
+        user.setIsAdmin(false);
+        user.setJoinDate(new java.sql.Date(Calendar.getInstance().getTimeInMillis()));
+
+        userRepo.save(user);
 
         return "welcome";
     }
