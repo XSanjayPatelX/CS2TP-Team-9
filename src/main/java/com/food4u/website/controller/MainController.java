@@ -22,7 +22,7 @@ public class MainController {
         return "product";
     }
 
-    @GetMapping(value = "/aboutus")
+    @GetMapping(value = "/about-us")
     public String aboutusPage() {
         return "aboutus";
     }
