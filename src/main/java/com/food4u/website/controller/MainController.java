@@ -21,9 +21,19 @@ public class MainController {
         return "welcome";
     }
 
-    @GetMapping(value = "/products")
-    public String productsPage() {
-        return "products";
+    @GetMapping(value = "/product")
+    public String productPage() {
+        return "product";
+    }
+
+    @GetMapping(value = "editproduct")
+    public String editproductPage() {
+        return "editproduct";
+    }
+
+    @GetMapping(value = "updateproduct")
+    public String updateproductPage() {
+        return "updateproduct";
     }
 
     @GetMapping(value = "/aboutus")
