@@ -1,9 +1,16 @@
-package com.food4u.website.Food_ItemController;
+package com.food4u.website.controller;
 import java.time.LocalDate;
+import com.food4u.website.entity.Food_Item;
+import com.food4u.website.repository.Food_ItemRepository;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -12,16 +19,16 @@ public class Food_ItemController {
 @Autowired
 private Food_ItemRepository repository;
 
-    @GetMapping({"/view", "/"})
-    public ModelAndView getProducts(){
-        //for(int i = 0; i > repository.count(); i++){
-            //repository.getById(i).setImage(repository.getById(i).getImage());
-        //}
-    ModelAndView mav = new ModelAndView("productList");
-    List<Food_Item> products = repository.findAll();
-    mav.addObject("products", products);
-    return mav;
+    @GetMapping("/view")
+    public ModelAndView getProducts(HttpSession session)
+    {
+        Map<String, Object> model = new HashMap<String, Object>();
+
+        List<Food_Item> myList = repository.findAll();
+        model.put("products", myList );
+        return new ModelAndView("editProducts", model);
     }
+
 
     @PostMapping("/save")
     public String save(@ModelAttribute Food_Item foodItem){
