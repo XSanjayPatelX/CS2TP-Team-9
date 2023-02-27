@@ -1,4 +1,5 @@
-package com.example.demo.Food_Item;
+package com.food4u.website.Food_ItemRepository;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
