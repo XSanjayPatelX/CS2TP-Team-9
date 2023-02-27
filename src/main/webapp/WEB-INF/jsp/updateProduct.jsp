@@ -14,7 +14,6 @@
   <h3 class="text-white">Edit Product</h3>
   <hr/>
   <form action="${pageContext.request.contextPath}/save" method="POST">
-    <input type="text" readonly name="id" value="${products.id}" class="form-control col-4 mb-4" placeholder="Enter ID" />
     <input type="text" name="food" value="${products.food}" class="form-control col-4 mb-4" placeholder="Enter Name" />
     <input type="text" name="price" value="${products.price}" class="form-control col-4 mb-4" placeholder="Enter Price" />
     <input type="text" name="image" value="${products.image}" class="form-control col-4 mb-4" placeholder="Enter Image" />
@@ -22,10 +21,8 @@
     <input type="text" name="category" value="${products.category}" class="form-control col-4 mb-4" placeholder="Enter Category" />
     <input type="text" name="stock" value="${products.stock}" class="form-control col-4 mb-4" placeholder="Enter Stock" />
     <input type="text" name="altText" value="${products.altText}" class="form-control col-4 mb-4" placeholder="Enter Alt Text" />
-    <input type="text" readonly name="createdAt" value="${products.createdAt}" class="form-control col-4 mb-4" placeholder="" />
     <input type="text" readonly name="updatedAt" value="${products.updatedAt}" class="form-control col-4 mb-4" placeholder="" />
     <button type="submit" class="btn btn-info col-2">Save</button>
-    <input type="hidden" name="id" value="${products.id}" />
   </form>
   <hr/>
   <a href="${pageContext.request.contextPath}/view">Back to list</a>

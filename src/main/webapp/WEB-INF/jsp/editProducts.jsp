@@ -63,8 +63,8 @@
 </c:if>
 </c:forEach>
 <c:forEach var="product" items="${products}">
-<div class="d-inline-block mt-3 mb-3">
-    <div class="card mx-2 bg-danger">
+<div class="d-inline-block">
+    <div class="card bg-danger">
     <img class="card-img-top" src="/images/${product.image}" alt="${product.altText}" width="50" height="150"/>
         <div class="card-body">
             <p class="card-text">Name: ${product.food}</p>
@@ -77,15 +77,20 @@
             <li class="list-group-item bg-danger">Stock: ${product.stock}</li>
         </ul>
         <div class="card-body">
-            <a href="#" class="card-link link-secondary">Created at: ${product.createdAt}</a>
-            </br>
             <a href="#" class="card-link link-secondary">Updated at: ${product.updatedAt}</a>
             </br>
-            <a href="<c:url value='/showUpdateForm?id=${product.id}'/>" class="btn btn-dark">Update</a>
+            <a href="<c:url value='/showUpdateForm?id=${product.id}'/>" class="mt-2 btn btn-dark">Update</a>
         </div>
     </div>
 </div>
 </c:forEach>
-
+<div class="d-inline-block ml-5 mt-5 mb-3">
+     <div class="card bg-danger">
+     <div class="card-body">
+            <a href="<c:url value='/newProduct'/>" class="btn btn-dark">
+            </a>
+     </div>
+    </div>
+</div>
 </body>
 </html>

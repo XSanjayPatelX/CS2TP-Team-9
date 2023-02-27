@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import java.lang.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +26,10 @@ private Food_ItemRepository repository;
         Map<String, Object> model = new HashMap<String, Object>();
 
         List<Food_Item> myList = repository.findAll();
+        Long count = repository.count();
+        int max = count.intValue();
         model.put("products", myList );
+        model.put("max", max);
         return new ModelAndView("editProducts", model);
     }
 
@@ -44,4 +48,10 @@ private Food_ItemRepository repository;
         mav.addObject("products", foodItem);
         return mav;
     }
+    @GetMapping("/newProduct")
+    public ModelAndView showUpdateForm(){
+        ModelAndView mav = new ModelAndView("updateProduct");
+        return mav;
+    }
+
 }
