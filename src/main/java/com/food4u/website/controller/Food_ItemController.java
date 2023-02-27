@@ -41,12 +41,16 @@ private Food_ItemRepository repository;
     public ModelAndView showUpdateForm(@RequestParam Integer id) {
         ModelAndView mav = new ModelAndView("updateproduct");
         Food_Item foodItem = repository.findById(id).get();
+        String title = "Edit an existing product";
+        mav.addObject("title",title);
         mav.addObject("products", foodItem);
         return mav;
     }
     @GetMapping("/newProduct")
     public ModelAndView showUpdateForm(){
         ModelAndView mav = new ModelAndView("updateproduct");
+        String title = "Add a new product";
+        mav.addObject("title",title);
         return mav;
     }
 

@@ -11,7 +11,7 @@
 </head>
 <body class="bg-dark">
 <div class="container">
-  <h3 class="text-white">Edit Product</h3>
+  <h3 class="text-white">${title}</h3>
   <hr/>
   <form action="${pageContext.request.contextPath}/save" method="POST">
     <input type="text" name="food" value="${products.food}" class="form-control col-4 mb-4" placeholder="Enter Name" />
