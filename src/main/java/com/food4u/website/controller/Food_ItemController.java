@@ -24,13 +24,9 @@ private Food_ItemRepository repository;
     public ModelAndView getProducts(HttpSession session)
     {
         Map<String, Object> model = new HashMap<String, Object>();
-
         List<Food_Item> myList = repository.findAll();
-        Long count = repository.count();
-        int max = count.intValue();
         model.put("products", myList );
-        model.put("max", max);
-        return new ModelAndView("editProducts", model);
+        return new ModelAndView("editproduct", model);
     }
 
 
@@ -43,7 +39,7 @@ private Food_ItemRepository repository;
 
     @GetMapping("/showUpdateForm")
     public ModelAndView showUpdateForm(@RequestParam Integer id) {
-        ModelAndView mav = new ModelAndView("updateProduct");
+        ModelAndView mav = new ModelAndView("updateproduct");
         Food_Item foodItem = repository.findById(id).get();
         mav.addObject("products", foodItem);
         return mav;
