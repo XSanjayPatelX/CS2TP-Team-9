@@ -2,22 +2,59 @@
 <html>
 <head>
     <title> Edit Products </title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="editProducts.css">
 </head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div>
+    <h2 class="mx-auto">Edit Products</h2>
+  </div>
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <a class="text-reset me-3" href="#">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+
+
 <body class="bg-secondary">
-<div class="d-flex justify-content-center">
-<h2 class="text-white">Food4U Edit Product List</h2>
-</div>
 <c:forEach var="product" items="${products}">
 <c:if test="${product.stock < 50}">
-<div class="mx-2">
+<div class="mx-2 mt-3">
     <div class="alert alert-success alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <strong><p>Product ID: ${product.id} stock is low</p></strong>
@@ -26,9 +63,9 @@
 </c:if>
 </c:forEach>
 <c:forEach var="product" items="${products}">
-<div class="d-inline-block mb-3">
-  <img src="/images/${product.image}" width="240" height="300"/>
-    <div class="card mx-2 bg-danger" style="width: 100%;">
+<div class="d-inline-block mt-3 mb-3">
+    <div class="card mx-2 bg-danger">
+    <img class="card-img-top" src="/images/${product.image}" alt="${product.altText}" width="50" height="150"/>
         <div class="card-body">
             <p class="card-text">Name: ${product.food}</p>
             <p class="card-text">ID: ${product.id}</p>
