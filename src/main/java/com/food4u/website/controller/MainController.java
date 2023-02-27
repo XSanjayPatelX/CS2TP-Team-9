@@ -24,7 +24,7 @@ public class MainController {
 
     @GetMapping(value = "/about-us")
     public String aboutusPage() {
-        return "aboutus";
+        return "about-us";
     }
 
     @GetMapping(value = "/login")
