@@ -1,4 +1,4 @@
-package com.example.demo.Food_Item;
+package com.food4u.website.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
