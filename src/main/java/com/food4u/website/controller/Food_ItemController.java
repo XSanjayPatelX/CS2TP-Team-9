@@ -46,7 +46,7 @@ private Food_ItemRepository repository;
     }
     @GetMapping("/newProduct")
     public ModelAndView showUpdateForm(){
-        ModelAndView mav = new ModelAndView("updateProduct");
+        ModelAndView mav = new ModelAndView("updateproduct");
         return mav;
     }
 
