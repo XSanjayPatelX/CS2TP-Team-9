@@ -16,6 +16,7 @@ private Food_ItemRepository repository;
     public ModelAndView getProducts(){
         //for(int i = 0; i > repository.count(); i++){
             //repository.getById(i).setImage(repository.getById(i).getImage());
+        //}
     ModelAndView mav = new ModelAndView("productList");
     List<Food_Item> products = repository.findAll();
     mav.addObject("products", products);
