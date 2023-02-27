@@ -16,8 +16,7 @@ public class Food_Item {
     private int id;
     private String food;
     private float price;
-    private byte[] image;
-    private String encodedImage;
+    private String image;
     private String description;
     private String category;
     private int stock;
@@ -28,7 +27,7 @@ public class Food_Item {
     private LocalDate updatedAt;
     public Food_Item() {
     }
-    public Food_Item(int id, String food, float price, byte[] image, String description, String category, int stock, String altText, LocalDate createdAt, LocalDate updatedAt, String encodedImage) {
+    public Food_Item(int id, String food, float price,String image, String description, String category, int stock, String altText, LocalDate createdAt, LocalDate updatedAt) {
         this.id = id;
         this.food = food;
         this.price = price;
@@ -39,21 +38,7 @@ public class Food_Item {
         this.altText = altText;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
-        if (image != null){
-            byte[] encodeBase64 = Base64.getEncoder().encode(image);
-            String base64Encoded = new String(encodeBase64, StandardCharsets.UTF_8);
-            this.encodedImage = base64Encoded;
-        }
-
-        System.out.println("Image length: " + (this.image != null ? image.length : 0));
-
     }
-
-    public void setImage(byte[] image){
-        this.image = image;
-        this.encodedImage = Base64.getEncoder().encodeToString(image);
-    }
-
     public int getId() {
         return id;
     }
@@ -78,11 +63,11 @@ public class Food_Item {
         this.price = price;
     }
 
-    public byte[] getImage() {
-        return image;
+    public String getImage(){
+        return this.image;
     }
 
-    public void setTImage(byte[] image) {
+    public void setImage(String image){
         this.image = image;
     }
 

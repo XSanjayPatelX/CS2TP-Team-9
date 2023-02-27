@@ -27,6 +27,7 @@
 </c:forEach>
 <c:forEach var="product" items="${products}">
 <div class="d-inline-block mb-3">
+  <img src="/images/${product.image}" width="240" height="300"/>
     <div class="card mx-2 bg-danger" style="width: 100%;">
         <div class="card-body">
             <p class="card-text">Name: ${product.food}</p>
