@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/about-us.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
     <title>About FOOD4U</title>
   </head>
   <body>
     <!--Title 1 -About us (FOOD4U)-->
+    <%@ include file="parts/header.jsp" %>
     <div class="wrapper">
       <div class="section1">
         <div class="sub-heading">
@@ -118,5 +119,6 @@
         <p>&copy; 2023 FOOD4U. All rights reserved.</p>
       </div>
     </div>
+    <%@ include file="parts/footer.jsp" %>
   </body>
 </html>

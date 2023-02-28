@@ -8,13 +8,11 @@
 }
 .background-home{
     background-image: url(../images/img/hero4.jpg);
-
-   
     
 }
 .background-contact{
     background-image: url(../images/img/banner/b2.jpg);
-   
+
 }
 
 .navigation-bar{
@@ -27,7 +25,7 @@
     justify-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgba(7, 7, 7, 0.225);
+    background-color: rgba(7, 7, 7, 0.650);
 }
 .nav-logo img{
     width: 10vmax;
@@ -61,6 +59,11 @@
     filter: brightness(130%);
   
 }
+.nav-menu a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none!important;
+}
+
 .main-text-container{
     color: white;
     text-align: center;
