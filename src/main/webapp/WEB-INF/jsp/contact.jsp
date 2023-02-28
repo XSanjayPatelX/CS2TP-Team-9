@@ -14,8 +14,8 @@
         <section id="form-details">
           <form action="">
             <span class="form-small-heading">LEAVE A MESSAGE</span>
-            <p id="statement-paragraph">Got Question ?
-            <p id="logo"> Food <span class="italic-heading">4</span> U </p> Got You Covered </p>
+            <p id="statement-paragraph">Got a question?
+            <p id="logo"> Food <span class="italic-heading">4</span> U</p>
             <input style="margin-top: 2vmax;" type="text" name="" id="" placeholder="Your Name">
             <input type="text" name="" id="" placeholder="E-mail">
             <input type="text" name="" id="" placeholder="Subject">
