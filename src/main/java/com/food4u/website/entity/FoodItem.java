@@ -1,16 +1,14 @@
 package com.food4u.website.entity;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
-import java.util.Base64;
 
 @Entity
 @Table(name = "food_item")
 @Data
-
-public class Food_Item {
+public class FoodItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -20,14 +18,15 @@ public class Food_Item {
     private String description;
     private String category;
     private int stock;
-
     private String altText;
-
     private LocalDate createdAt;
     private LocalDate updatedAt;
-    public Food_Item() {
+
+    public FoodItem() {
+
     }
-    public Food_Item(int id, String food, float price,String image, String description, String category, int stock, String altText, LocalDate createdAt, LocalDate updatedAt) {
+
+    public FoodItem(int id, String food, float price, String image, String description, String category, int stock, String altText, LocalDate createdAt, LocalDate updatedAt) {
         this.id = id;
         this.food = food;
         this.price = price;
@@ -39,6 +38,7 @@ public class Food_Item {
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
+
     public int getId() {
         return id;
     }
