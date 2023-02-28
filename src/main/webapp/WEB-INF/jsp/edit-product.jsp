@@ -51,7 +51,7 @@
 </nav>
 
 
-<body class="bg-secondary">
+<body class="bg-dark">
 <c:forEach var="product" items="${products}">
 <c:if test="${product.stock < 50}">
 <div class="mx-2 mt-3">
@@ -64,7 +64,7 @@
 </c:forEach>
 <c:forEach var="product" items="${products}">
 <div class="d-inline-block">
-    <div class="card bg-danger">
+    <div class="card bg-secondary mb-3">
     <img class="card-img-top" src="/images/${product.image}" alt="${product.altText}" width="50" height="150"/>
         <div class="card-body">
             <p class="card-text">Name: ${product.food}</p>
@@ -72,9 +72,9 @@
             <p class="card-text">Description: ${product.description}</p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item bg-danger">Price: ${product.price}</li>
-            <li class="list-group-item bg-danger">Category: ${product.category}</li>
-            <li class="list-group-item bg-danger">Stock: ${product.stock}</li>
+            <li class="list-group-item bg-secondary">Price: ${product.price}</li>
+            <li class="list-group-item bg-secondary">Category: ${product.category}</li>
+            <li class="list-group-item bg-secondary">Stock: ${product.stock}</li>
         </ul>
         <div class="card-body">
             <a href="#" class="card-link link-secondary">Updated at: ${product.updatedAt}</a>
