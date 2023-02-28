@@ -22,6 +22,7 @@
     <input type="text" name="stock" value="${products.stock}" class="form-control col-4 mb-4" placeholder="Enter Stock" />
     <input type="text" name="altText" value="${products.altText}" class="form-control col-4 mb-4" placeholder="Enter Alt Text" />
     <input type="text" readonly name="updatedAt" value="${products.updatedAt}" class="form-control col-4 mb-4" placeholder="" />
+    <input type="text" readonly name="id" value="${products.id}" class="form-control col-4 mb-4" placeholder="" />
     <button type="submit" class="btn btn-info col-2">Save</button>
   </form>
   <hr/>
