@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="homepage.css">
+    <link href="css/homepage.css" rel="stylesheet">
 </head>
 <body>
 
     <body class="background-contact">
         <div class="navigation-bar">
             <div class="nav-logo">
-                <img src="img/banner/Fast Food Restaurant Logo (2).png" alt="">
+                <img src="images/img/banner/Fast Food Restaurant Logo (2).png" alt="">
             </div>
             <div class="nav-menu">
                 <ul>

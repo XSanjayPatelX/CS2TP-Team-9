@@ -27,6 +27,11 @@ public class MainController {
         return "about-us";
     }
 
+    @GetMapping(value = "/contact")
+    public String contactPage() {
+        return "contact";
+    }
+
     @GetMapping(value = "/login")
     public String loginPage() {
         return "login";

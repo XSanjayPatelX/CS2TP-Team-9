@@ -7,13 +7,13 @@
     transition: all 0.5s ease-in-out;
 }
 .background-home{
-    background-image: url(img/hero4.jpg);
+    background-image: url(../images/img/hero4.jpg);
 
    
     
 }
 .background-contact{
-    background-image: url(img/banner/b2.jpg);
+    background-image: url(../images/img/banner/b2.jpg);
    
 }
 
