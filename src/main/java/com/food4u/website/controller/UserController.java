@@ -22,7 +22,7 @@ public class UserController {
 
             if (u.getPassword().equals(user.getPassword())) {
                 modelMap.put("user", u);
-                return "welcome";
+                return "index";
             }
         }
 
