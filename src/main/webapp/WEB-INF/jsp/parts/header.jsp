@@ -14,7 +14,7 @@
         <a href="/">Home</a>
       </li>
       <li>
-        <a href="products">Products</a>
+        <a href="products">Menu</a>
       </li>
       <li>
         <a href="about-us">About Us</a>

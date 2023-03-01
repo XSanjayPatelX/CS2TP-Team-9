@@ -115,9 +115,6 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.5860754138334!2d-1.8920456839200972!3d52.48662987980791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bd2e9cf474ef%3A0xb48a787296dbcd89!2sAston%20University%20Main%20Building!5e0!3m2!1sen!2suk!4v1669167102012!5m2!1sen!2suk" width="1000" height="300" style="border:0; margin-left: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <br>
-      <div class="footer">
-        <p>&copy; 2023 FOOD4U. All rights reserved.</p>
-      </div>
     </div>
     <%@ include file="parts/footer.jsp" %>
   </body>

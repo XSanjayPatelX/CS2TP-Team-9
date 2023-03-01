@@ -4,37 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simply Delicious!</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
   </head>
   <body>
     <div class="bg"></div>
-    <div class="navigation-bar">
-      <div class="nav-logo">
-        <img src="images/img/banner/Fast Food Restaurant Logo (2).png" alt="">
-        <ul>
-            <li>
-              <span class="fas fa-user-circle"></span>
-              <a href="login">Login</a>
-            </li>
-        </ul>
-      </div>
-      <div class="nav-menu">
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="products">Products</a>
-          </li>
-          <li>
-            <a href="about-us">About Us</a>
-          </li>
-          <li>
-            <a href="contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
+    <%@ include file="parts/header.jsp" %>
       <div class="nav-menu">
           <ul>
               <li>
@@ -473,6 +449,8 @@
         </div>
       </div>
     </div>
+    <br><br>
+    <%@ include file="parts/footer.jsp" %>
     <script src="js/products.js"></script>
   </body>
 </html>
