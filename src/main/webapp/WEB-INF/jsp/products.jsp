@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/homepage.css" />
   </head>
-  <body>
-    <div class="bg"></div>
+  <body class="background-contact">
     <%@ include file="parts/header.jsp" %>
       <div class="nav-menu">
           <ul>
@@ -37,8 +36,6 @@
           </ul>
       </div>
     </div>
-    <script src="https://kit.fontawesome.com/c54d8b2ca0.js" crossorigin="anonymous"></script>
-    <h1>Menu Page</h1>
     <!-- Code for each of the products-->
     <div class="products-list-opt">
       <div class="opt-itms">
@@ -451,6 +448,7 @@
     </div>
     <br><br>
     <%@ include file="parts/footer.jsp" %>
+    <script src="https://kit.fontawesome.com/c54d8b2ca0.js" crossorigin="anonymous"></script>
     <script src="js/products.js"></script>
   </body>
 </html>

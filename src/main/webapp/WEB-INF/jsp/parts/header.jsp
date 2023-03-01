@@ -1,6 +1,6 @@
 <div class="navigation-bar">
   <div class="nav-logo">
-    <img src="images/img/banner/Fast Food Restaurant Logo (2).png" alt="">
+    <a href="/"><img src="images/img/banner/Fast Food Restaurant Logo (2).png" alt=""></a>
     <ul>
         <li>
           <span class="fas fa-user-circle"></span>
