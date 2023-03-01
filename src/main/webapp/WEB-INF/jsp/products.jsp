@@ -13,25 +13,25 @@
       <div class="nav-menu">
           <ul>
               <li>
-                <button id="our-products">Whole Menu</button>
+                <button class="opt-btn" id="our-products">Whole Menu</button>
               </li>
               <li>
-                <button id="specials">Specials</button>
+                <button class="opt-btn" id="specials">Specials</button>
               </li>
               <li>
-                <button id="vegan">Vegan</button>
+                <button class="opt-btn" id="vegan">Vegan</button>
               </li>
               <li>
-                <button id="Burgers">Burgers</button>
+                <button class="opt-btn" id="Burgers">Burgers</button>
               </li>
               <li>
-                <button id="Drinks">Drinks</button>
+                <button class="opt-btn" id="Drinks">Drinks</button>
               </li>
               <li>
-                <button id="Sides">Sides</button>
+                <button class="opt-btn" id="Sides">Sides</button>
               </li>
               <li>
-                <button id="Deserts">Deserts</button>
+                <button class="opt-btn" id="Deserts">Desserts</button>
               </li>
           </ul>
       </div>
