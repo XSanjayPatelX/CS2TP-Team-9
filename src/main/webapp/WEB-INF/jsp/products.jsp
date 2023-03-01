@@ -77,7 +77,7 @@
               <p>Vegan Burger</p>
               <p2>Plant based burger to sute your cravings!</p2>
               <br>
-              <div class="cost">£3.49 </span>
+              <div class="cost">&#163;3.49 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -93,7 +93,7 @@
               <p>Vegan Kebab</p>
               <p2>Plant based Kebab to nurish you tasebuds!</p2>
               <br>
-              <div class="cost">£6.99 </span>
+              <div class="cost">&#163;6.99 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -109,7 +109,7 @@
               <p>Vegan Pizza</p>
               <p2>Plant based pizza to attack your hunger!</p2>
               <br>
-              <div class="cost">£9.99 </span>
+              <div class="cost">&#163;9.99 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -125,7 +125,7 @@
               <p>Vegan Tocos</p>
               <p2>Plant based tocos grilled for perfection</p2>
               <br>
-              <div class="cost">£2.99 </span>
+              <div class="cost">&#163;2.99 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -141,7 +141,7 @@
               <p>Vegan Wrap</p>
               <p2>Jucy wraps to nurish your hunger!</p2>
               <br>
-              <div class="cost">£3.49 </span>
+              <div class="cost">&#163;3.49 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -158,7 +158,7 @@
               <p>Hamburger</p>
               <p2>Made wth 100% beef to meat your needs!</p2>
               <br>
-              <div class="cost">£1.99 </span>
+              <div class="cost">&#163;1.99 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -174,7 +174,7 @@
               <p>Double Hamburger</p>
               <p2>Feeling hungy? greate choice!</p2>
               <br>
-              <div class="cost">£2.79 </span>
+              <div class="cost">&#163;2.79 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -190,7 +190,7 @@
               <p>Cheaseburger</p>
               <p2>Cheasy addtion to your burger</p2>
               <br>
-              <div class="cost">£0.99 </span>
+              <div class="cost">&#163;0.99 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -206,7 +206,7 @@
               <p>Chickenburger</p>
               <p2>Feeling a bit of both chicken and a burger?</p2>
               <br>
-              <div class="cost">£2.19 </span>
+              <div class="cost">&#163;2.19 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -222,7 +222,7 @@
               <p>Fishburger</p>
               <p2>Feeling fishy today?nice choice!</p2>
               <br>
-              <div class="cost">£0.99 </span>
+              <div class="cost">&#163;0.99 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -239,7 +239,7 @@
               <p>Apple Juice</p>
               <p2>Cany go wron with this, works every way!</p2>
               <br>
-              <div class="cost">£0.79 </span>
+              <div class="cost">&#163;0.79 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -255,7 +255,7 @@
               <p>Orange Juice</p>
               <p2>Strong taste to attack your tastebuds!</p2>
               <br>
-              <div class="cost">£0.79 </span>
+              <div class="cost">&#163;0.79 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -271,7 +271,7 @@
               <p>Coke</p>
               <p2>Add flovor to your meal, can't go wrong</p2>
               <br>
-              <div class="cost">£1.49 </span>
+              <div class="cost">&#163;1.49 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -287,7 +287,7 @@
               <p>Water</p>
               <p2>Clasic, cant go wrong with that</p2>
               <br>
-              <div class="cost">£1.10 </span>
+              <div class="cost">&#163;1.10 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -303,7 +303,7 @@
               <p>sparkling Water</p>
               <p2>Add a sparkle to your meal!</p2>
               <br>
-              <div class="cost">£1.29 </span>
+              <div class="cost">&#163;1.29 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -320,7 +320,7 @@
               <p>French Fries</p>
               <p2>Best for an addtion to your meal</p2>
               <br>
-              <div class="cost">£2.30 </span>
+              <div class="cost">&#163;2.30 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -336,7 +336,7 @@
               <p>Potato Wedges</p>
               <p2>Best for an addtion to your meal</p2>
               <br>
-              <div class="cost">£2.30 </span>
+              <div class="cost">&#163;2.30 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -352,7 +352,7 @@
               <p>Mashed Potato</p>
               <p2>Best for an addtion to your meal</p2>
               <br>
-              <div class="cost">£1.69 </span>
+              <div class="cost">&#163;1.69 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -368,7 +368,7 @@
               <p>Corn On The Cob</p>
               <p2>Best for an addtion to your meal</p2>
               <br>
-              <div class="cost">£1.29 </span>
+              <div class="cost">&#163;1.29 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -384,7 +384,7 @@
               <p>Baked Beans</p>
               <p2>Best for an addtion to your meal</p2>
               <br>
-              <div class="cost">£1.69 </span>
+              <div class="cost">&#163;1.69 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -401,7 +401,7 @@
               <p>IceCream</p>
               <p2>Creamy delux to attack your tasebuds</p2>
               <br>
-              <div class="cost">£1.99 </span>
+              <div class="cost">&#163;1.99 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -417,7 +417,7 @@
               <p>Chocolate Chip Cookies</p>
               <p2>Mesmorizing Chocolate masterclass heaven</p2>
               <br>
-              <div class="cost">£2.49 </span>
+              <div class="cost">&#163;2.49 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -433,7 +433,7 @@
               <p>Chocolate Chip Muffin</p>
               <p2>Soft Chocolate heaven, nice choice!</p2>
               <br>
-              <div class="cost">£1.79 </span>
+              <div class="cost">&#163;1.79 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -449,7 +449,7 @@
               <p>Cheasecake</p>
               <p2>Feeling a bit Cheasy? nice choice!</p2>
               <br>
-              <div class="cost">£2.29 </span>
+              <div class="cost">&#163;2.29 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
@@ -465,7 +465,7 @@
               <p>Brownies</p>
               <p2>Had a rough day? end it well with a Brownie!</p2>
               <br>
-              <div class="cost">£1.29 </span>
+              <div class="cost">&#163;1.29 </span>
               </div>
               <a href="#" class="basket-btn">Add to Basket</a>
             </div>
