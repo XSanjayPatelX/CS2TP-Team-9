@@ -8,20 +8,60 @@
     <link rel="stylesheet" href="css/product.css" />
   </head>
   <body>
-    <!-- Code for the options -->
-    <div class="options">
-      <ul>
-        <li>
-          <button class="opt-btn" id="our-products">Our Products</button>
-          <button class="opt-btn" id="specials">Specials</button>
-          <button class="opt-btn" id="vegan">Vegan</button>
-          <button class="opt-btn" id="Burgers">Burgers</button>
-          <button class="opt-btn" id="Drinks">Drinks</button>
-          <button class="opt-btn" id="Sides">Sides</button>
-          <button class="opt-btn" id="Deserts">Deserts</button>
-        </li>
-      </ul>
+    <div class="bg"></div>
+    <div class="navigation-bar">
+      <div class="nav-logo">
+        <img src="images/img/banner/Fast Food Restaurant Logo (2).png" alt="">
+        <ul>
+            <li>
+              <span class="fas fa-user-circle"></span>
+              <a href="login">Login</a>
+            </li>
+        </ul>
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="products">Products</a>
+          </li>
+          <li>
+            <a href="about-us">About Us</a>
+          </li>
+          <li>
+            <a href="contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-menu">
+          <ul>
+              <li>
+                <button id="our-products">Whole Menu</button>
+              </li>
+              <li>
+                <button id="specials">Specials</button>
+              </li>
+              <li>
+                <button id="vegan">Vegan</button>
+              </li>
+              <li>
+                <button id="Burgers">Burgers</button>
+              </li>
+              <li>
+                <button id="Drinks">Drinks</button>
+              </li>
+              <li>
+                <button id="Sides">Sides</button>
+              </li>
+              <li>
+                <button id="Deserts">Deserts</button>
+              </li>
+          </ul>
+      </div>
     </div>
+    <script src="https://kit.fontawesome.com/c54d8b2ca0.js" crossorigin="anonymous"></script>
     <h1>Menu Page</h1>
     <!-- Code for each of the products-->
     <div class="products-list-opt">
