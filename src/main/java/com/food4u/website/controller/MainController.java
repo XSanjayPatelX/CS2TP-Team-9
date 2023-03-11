@@ -12,14 +12,9 @@ public class MainController {
     @Autowired
     private UserRepository userRepo;
 
-    @GetMapping(value = "/welcome")
-    public String homePage() {
-        return "welcome";
-    }
-
-    @GetMapping(value = "/product")
+    @GetMapping(value = "/products")
     public String productPage() {
-        return "product";
+        return "products";
     }
 
     @GetMapping(value = "/about-us")
