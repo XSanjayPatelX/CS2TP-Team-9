@@ -78,13 +78,18 @@
 .nav-menu ul{
     list-style: none;
     display: flex;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px
 }
 .nav-menu ul li{
-    padding: 2vmax 2vmax;
+    /* padding: 2vmax 2vmax; */
     font-size: 1.1vmax;
     font-weight: 400;
     letter-spacing: 0.1vmax;
-    padding-top: 0.5vmax;
+    /* padding-top: 0.5vmax; */
 }
 .nav-menu ul li a:hover{
     padding-bottom: 0.5vmax;
@@ -108,7 +113,6 @@
     font-size: 1.1vmax;
     font-weight: 400;
     letter-spacing: 0.1vmax;
-    padding: 25px;
 }
 .nav-menu ul li button:hover{
     text-decoration: underline;
@@ -133,11 +137,11 @@
 }
 
 .product {
-    border-radius: 25px;
+    /* border-radius: 25px; */
     border: 2px solid;
     width: 200px;
     height: auto;
-    padding: 15px;
+    /* padding: 15px; */
     background-color: rgba(255, 255, 255, 0.75);
 }
 
@@ -164,9 +168,9 @@ h1 {
 }
 
 button {
-    width: 180px;
-    height: 90px;
-    padding: 30px;
+    width: 150px;
+    height: 98px;
+    padding: 35px;
 }
 
 .opt-btns {
@@ -232,8 +236,6 @@ button {
 }
 
 .description {
-    width: 180px;
-    height: 130px;
     text-align: center;
 }
 
@@ -245,15 +247,18 @@ button {
 
 .description .cost {
     display: inline-block;
-    margin-top: 6px;
+    margin-top: 5px;
+    margin-bottom: 2px;
     font-weight: 600;
 }
 
 .basket-btn {
     display: inline-block;
-    margin: 10px 0px 0px 5px;
-    padding: 10px 22px 10px 30px;
-    width: 115px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 10px;
+    width: 180px;
+    height: 20px;
     color: aliceblue;
     background-color: #ffb03b;
 }
