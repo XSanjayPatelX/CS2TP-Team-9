@@ -1,4 +1,4 @@
-package com.food4u.website.controller;
+package com.food4u.website.Controller;
 
 import com.food4u.website.dto.UserDto;
 import com.food4u.website.entity.User;

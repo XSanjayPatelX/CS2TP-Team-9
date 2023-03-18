@@ -11,9 +11,9 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/products")
-    public String products() {
-        return "products";
+    @GetMapping("/menu")
+    public String menu() {
+        return "menu";
     }
 
     @GetMapping("/contact")

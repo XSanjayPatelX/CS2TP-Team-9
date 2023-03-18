@@ -30,11 +30,14 @@ public class User
     @Column(nullable=false, name="last_name")
     private String lastName;
 
-    @Column(nullable=false, unique=true)
+    @Column(nullable=false, unique=true, name="email")
     private String email;
 
     @Column(nullable=false)
     private String password;
+
+    @Column(nullable=true)
+    private String admin;
 
     @Column(nullable=true, name="join_date")
     private Date joinDate;
