@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <link th:href="@{webjars/bootstrap/3.3.6/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/login.css}" rel="stylesheet"/>
+    <title>Login</title>
+</head>
+<body>
+<main>
+    <div class="box">
+        <div class="login-box">Log in</div>
+        <form class="form" method="POST" th:action="@{/login}" role="form">
+            <div th:if="${param.error}">
+                <div class="alert alert-danger">Invalid email or password.</div>
+            </div>
+            <div th:if="${param.logout}">
+                <div class="alert alert-success">You have been logged out.</div>
+            </div>
+            <input class="block" type="email" name="username" id="username" placeholder="Email" />
+            <input class="block" type="password" name="password" id="password" placeholder="Password" />
+            <br />
+            <button class="block" id="login-btn">Log in</button>
+            <p>Not a member? <a href="register">Register here</a></p>
+        </form>
+    </div>
+</main>
+<script th:src="@{webjars/jquery/1.9.1/jquery.min.js}"></script>
+<script th:src="@{webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
+</body>
+</html>
