@@ -28,17 +28,11 @@ public class SpringSecurity {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
-                        authorize.requestMatchers(req -> req.getServletPath().startsWith("/register")).permitAll()
-                                .requestMatchers(req -> req.getServletPath().startsWith("/index") ||
-                                        req.getServletPath().startsWith("/") ||
-                                        req.getServletPath().startsWith("/products") ||
-                                        req.getServletPath().startsWith("/contact") ||
-                                        req.getServletPath().startsWith("/about-us")).permitAll()
-                                .requestMatchers(req -> req.getServletPath().startsWith("/css/") ||
-                                        req.getServletPath().startsWith("/js/") ||
-                                        req.getServletPath().startsWith("/images/") ||
-                                        req.getServletPath().startsWith("/webjars/")).permitAll()
-                                .requestMatchers(req -> req.getServletPath().startsWith("/users")).hasRole("ADMIN")
+                        authorize
+                                .requestMatchers(req -> req.getRequestURI().matches("/register.*")).permitAll()
+                                .requestMatchers(req -> req.getRequestURI().matches("/(index|products|contact|about-us|/)?")).permitAll()
+                                .requestMatchers(req -> req.getRequestURI().matches("/(css|js|images|webjars)/.*")).permitAll()
+                                .requestMatchers(req -> "/users".equalsIgnoreCase(req.getRequestURI())).hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 ).formLogin(
                         form -> form
@@ -53,7 +47,7 @@ public class SpringSecurity {
                 );
         return http.build();
     }
-    
+
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
