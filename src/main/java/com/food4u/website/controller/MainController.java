@@ -26,4 +26,13 @@ public class MainController {
         return "about-us";
     }
 
+    @GetMapping("/basket")
+    public String basket() {
+        return "basket";
+    }
+
+    @GetMapping("/checkout")
+    public String checkout() {
+        return "checkout";
+    }
 }
