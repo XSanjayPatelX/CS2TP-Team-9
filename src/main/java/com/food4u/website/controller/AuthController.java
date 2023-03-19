@@ -4,11 +4,13 @@ import com.food4u.website.dto.UserDto;
 import com.food4u.website.entity.User;
 import com.food4u.website.service.UserService;
 import jakarta.validation.Valid;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -51,4 +53,6 @@ public class AuthController {
         model.addAttribute("users", users);
         return "users";
     }
+
+    
 }
