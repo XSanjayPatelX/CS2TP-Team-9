@@ -203,7 +203,7 @@ button {
     width: 100%;
 }
 
-.opt-itms{
+.opt-itm{
     display: inline-block;
     display: flex;
     flex-wrap: wrap;
