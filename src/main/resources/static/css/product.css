@@ -221,6 +221,13 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.products-list-opt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 50px;
+}
 
 .product-img {
     position: relative;
@@ -261,4 +268,5 @@ button {
     height: 20px;
     color: aliceblue;
     background-color: #ffb03b;
+    cursor: pointer;
 }

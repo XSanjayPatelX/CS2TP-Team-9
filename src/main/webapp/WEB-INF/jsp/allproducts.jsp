@@ -8,7 +8,7 @@
 <h1>All Products</h1>
 <ul>
     <c:forEach items="${items}" var="item">
-        <li>${item.description}</li>
+        <% System.out.println(item); %>
     </c:forEach>
 </ul>
 </body>

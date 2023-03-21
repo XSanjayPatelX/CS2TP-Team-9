@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,24 +40,22 @@
     </div>
     <!-- Code for each of the products-->
     <div class="products-list-opt">
-      <c:forEach var="item" items="${items}">
-        <div class="opt-itm our-products ${item.category}">
-          <div class="product">
-            <div class="product-img">
-              <img src="${item.image}" alt="${item.altText}">
+        <c:forEach items="${items}" var="item">
+            <div class="product">
+                <div class="product-img">
+                    <img src="/images/${item.getImage()}" alt="${item.getAltText()}">
+                </div>
+                <div class="description">
+                    <p>${item.getFood()}</p>
+                    <p2>${item.getDesc()}</p2>
+                    <br>
+                    <div class="cost">&pound;${item.getPrice()}</div>
+                    <a href="#" class="basket-btn">Add to Basket</a>
+                </div>
             </div>
-            <div class="description">
-              <p>${item.food}</p>
-              <p2>${item.description}</p2>
-              <br>
-              <div class="cost">&pound;${item.price}
-              </div>
-              <a href="#" class="basket-btn">Add to Basket</a>
-            </div>
-          </div>
-        </div>
-      </c:forEach>
+        </c:forEach>
     </div>
+
     <br><br>
     <%@ include file="parts/footer.jsp" %>
     <script src="https://kit.fontawesome.com/c54d8b2ca0.js" crossorigin="anonymous"></script>
