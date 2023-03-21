@@ -30,15 +30,17 @@ public class SpringSecurity {
                 .authorizeHttpRequests((authorize) ->
                         authorize
                                 .requestMatchers(req -> req.getRequestURI().matches("/register.*")).permitAll()
-                                .requestMatchers(req -> req.getRequestURI().matches("/(index|products|contact|about-us|basket|checkout/)?")).permitAll()
+                                .requestMatchers(req -> req.getRequestURI().matches("/(index|menu|contact|about-us|basket|checkout/)?")).permitAll()
                                 .requestMatchers(req -> req.getRequestURI().matches("/(css|js|images|webjars)/.*")).permitAll()
                                 .requestMatchers(req -> "/users".equalsIgnoreCase(req.getRequestURI())).hasRole("ADMIN")
+                                .requestMatchers(req -> "/view".equalsIgnoreCase(req.getRequestURI())).hasRole("ADMIN")
+                                .requestMatchers(req -> "/updateproduct".equalsIgnoreCase(req.getRequestURI())).hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 ).formLogin(
                         form -> form
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/", true)
+                                .defaultSuccessUrl("/menu", true)
                                 .permitAll()
                 ).logout(
                         logout -> logout
