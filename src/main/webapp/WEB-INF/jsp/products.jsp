@@ -15,7 +15,7 @@
       <div class="nav-menu">
           <ul>
               <li>
-                <button class="opt-btn" id="our-products">Whole Menu</button>
+                <button class="opt-btn" id="product">Whole Menu</button>
               </li>
               <li>
                 <button class="opt-btn" id="specials">Specials</button>
@@ -33,7 +33,7 @@
                 <button class="opt-btn" id="Sides">Sides</button>
               </li>
               <li>
-                <button class="opt-btn" id="Deserts">Desserts</button>
+                <button class="opt-btn" id="Dessert">Desserts</button>
               </li>
           </ul>
       </div>
@@ -41,7 +41,7 @@
     <!-- Code for each of the products-->
     <div class="products-list-opt">
         <c:forEach items="${items}" var="item">
-            <div class="product">
+            <div class="product  ${item.getCategory()}">
                 <div class="product-img">
                     <img src="/images/${item.getImage()}" alt="${item.getAltText()}">
                 </div>
