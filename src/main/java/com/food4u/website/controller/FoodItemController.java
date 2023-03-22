@@ -57,7 +57,7 @@ public class FoodItemController {
     }
 
     @GetMapping("/products")
-    public ModelAndView getAllProductsPage() {
+    public ModelAndView getProductsPage() {
         Map<String, Object> model = new HashMap<>();
         List<FoodItem> items = foodItemRepository.findAll();
         model.put("items", items);
