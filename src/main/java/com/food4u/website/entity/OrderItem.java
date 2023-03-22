@@ -13,22 +13,82 @@ import lombok.Setter;
 @Entity
 @Table(name="order_item")
 public class OrderItem {
-
-    private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String name;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private int quantity;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private float price;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String category;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id", referencedColumnName = "id")
+    private Orders orders;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Orders getOrder() {
+        return orders;
+    }
+
+    public void setOrder(Orders order) {
+        this.orders = order;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderItem{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                ", category='" + category + '\'' +
+                '}';
+    }
 }
