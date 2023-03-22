@@ -41,8 +41,6 @@ public class UserServiceImpl implements UserService {
         user.setPostcode(userDto.getPostcode());
         user.setJoinDate(new java.sql.Date(Calendar.getInstance().getTimeInMillis()));
 
-        //encrypt the password once we integrate spring security
-        //user.setPassword(userDto.getPassword());
         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
         Role role = roleRepository.findByName("ROLE_ADMIN");
         if(role == null){

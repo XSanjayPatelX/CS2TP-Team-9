@@ -6,44 +6,44 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="food_items")
-public class FoodItems {
+@Table(name="food_item")
+public class FoodItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
-    @Column(nullable=true, name="price")
-    private String price;
+    @Column(nullable=true)
+    private String name;
 
-    @Column(nullable=true, name="image")
+    @Column(nullable=true)
+    private float price;
+
+    @Column(nullable=true)
     private String image;
 
-    @Column(nullable=true, name="description")
+    @Column(nullable=true)
     private String description;
 
-    @Column(nullable=true, name="category")
+    @Column(nullable=true)
     private String category;
 
-    @Column(nullable=true, name="stock")
-    private String stock;
+    @Column(nullable=true)
+    private int stock;
 
     @Column(nullable=true, name="alt_text")
-    private String alt_text;
+    private String altText;
 
     @Column(nullable=true, name="created_at")
-    private String created_at;
+    private Date createdAt;
 
     @Column(nullable=true, name="updated_at")
-    private String updated_at;
-
-    @Column(nullable=true, name="food")
-    private String food;
+    private Date updatedAt;
 }

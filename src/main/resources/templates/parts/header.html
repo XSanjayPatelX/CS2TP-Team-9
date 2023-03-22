@@ -10,11 +10,11 @@
         <li>
           <span class="fas fa-user-circle"></span>
           <span sec:authorize="isAnonymous()">
-                  <a href="login">Login</a>
-                  </span>
+            <a href="login">Login</a>
+          </span>
           <span sec:authorize="isAuthenticated()">
-                  <a href="login?logout"><span th:text="${#authentication.principal.email}"></span> (Logout)</a>
-                  </span>
+            <a href="login?logout"><span th:text="${#authentication.principal.email}"></span> (Logout)</a>
+          </span>
         </li>
       </ul>
     </div>

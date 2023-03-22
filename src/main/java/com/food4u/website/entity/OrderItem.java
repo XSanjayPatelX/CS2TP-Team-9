@@ -11,24 +11,24 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="order_items")
-public class OrderedItems {
+@Table(name="order_item")
+public class OrderItem {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
-    @Column(nullable=false, name="name")
+    @Column(nullable=false)
     private String name;
 
-    @Column(nullable=false, name="quantity")
-    private String quantity;
+    @Column(nullable=false)
+    private int quantity;
 
-    @Column(nullable=false, name="price")
-    private String price;
+    @Column(nullable=false)
+    private float price;
 
-    @Column(nullable=false, name="category")
+    @Column(nullable=false)
     private String category;
 }
