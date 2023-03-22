@@ -1,5 +1,7 @@
 package com.food4u.website.controller;
 
+import com.food4u.website.security.CustomUserDetails;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -34,5 +36,14 @@ public class MainController {
     @GetMapping("/checkout")
     public String checkout() {
         return "checkout";
+    }
+
+    @GetMapping("/user/address")
+    public String getUserAddress(Authentication authentication) {
+        CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+        String address = userDetails.getPassword();
+        System.out.println(address);
+
+        return "basket";
     }
 }

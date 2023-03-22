@@ -1,14 +1,15 @@
-package com.food4u.website.Controller;
+package com.food4u.website.controller;
 
 import com.food4u.website.dto.UserDto;
 import com.food4u.website.entity.User;
 import com.food4u.website.service.UserService;
 import jakarta.validation.Valid;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.security.Principal;
 import java.util.List;
@@ -23,7 +24,7 @@ public class AuthController {
     }
 
     @GetMapping("/login")
-    public String loginForm() {
+    public String loginForm(Principal principal) {
         return "login";
     }
 

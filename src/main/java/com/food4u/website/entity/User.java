@@ -20,21 +20,26 @@ public class User
 {
     private static final long serialVersionUID = 1L;
 
+    @Column(nullable=false, unique=true, name="email")
+    private String email;
+
+    @Column(nullable=false)
+    private String password;
+
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(nullable=false, name="first_name")
     private String firstName;
 
     @Column(nullable=false, name="last_name")
     private String lastName;
-
-    @Column(nullable=false, unique=true, name="email")
-    private String email;
-
-    @Column(nullable=false)
-    private String password;
 
     @Column(nullable=true)
     private String admin;
@@ -60,5 +65,6 @@ public class User
             joinColumns={@JoinColumn(name="USER_ID", referencedColumnName="ID")},
             inverseJoinColumns={@JoinColumn(name="ROLE_ID", referencedColumnName="ID")})
     private List<Role> roles = new ArrayList<>();
+
 
 }
