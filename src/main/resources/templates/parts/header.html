@@ -10,10 +10,10 @@
         <li>
           <span class="fas fa-user-circle"></span>
           <span sec:authorize="isAnonymous()">
-            <a href="login">Login</a>
+            <a href="/login">Login</a>
           </span>
           <span sec:authorize="isAuthenticated()">
-            <a href="login?logout"><span th:text="${#authentication.principal.firstName}"></span> (Logout)</a>
+            <a href="/logout"><span th:text="${#authentication.principal.firstName}"></span> (Logout)</a>
           </span>
         </li>
       </ul>
@@ -24,19 +24,19 @@
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="menu">Menu</a>
+          <a href="/menu">Menu</a>
         </li>
         <li>
-          <a href="about-us">About Us</a>
+          <a href="/about-us">About Us</a>
         </li>
         <li>
-          <a href="contact">Contact Us</a>
+          <a href="/contact">Contact Us</a>
         </li>
         <li>
-          <a href="basket">Basket</a>
+          <a href="/basket">Basket</a>
         </li>
         <li>
-          <a href="checkout">Checkout</a>
+          <a href="/checkout">Checkout</a>
         </li>
       </ul>
     </div>

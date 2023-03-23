@@ -30,7 +30,7 @@ public class SpringSecurity {
                 .authorizeHttpRequests((authorize) ->
                         authorize
                                 .requestMatchers(req -> req.getRequestURI().matches("/register.*")).permitAll()
-                                .requestMatchers(req -> req.getRequestURI().matches("/(index|menu|contact|about-us|basket|checkout|/)?")).permitAll()
+                                .requestMatchers(req -> req.getRequestURI().matches("/(index|menu|contact|about-us|/)?")).permitAll()
                                 .requestMatchers(req -> req.getRequestURI().matches("/(css|js|images|webjars)/.*")).permitAll()
                                 .requestMatchers(req -> req.getRequestURI().matches("/(users|view|updateproduct)?")).hasRole("ADMIN")
                                 .anyRequest().authenticated()
