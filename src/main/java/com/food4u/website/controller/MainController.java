@@ -1,5 +1,6 @@
 package com.food4u.website.controller;
 
+import com.food4u.website.entity.FoodItem;
 import com.food4u.website.model.Cart;
 import com.food4u.website.model.CartManager;
 import com.food4u.website.repository.FoodRepository;
@@ -10,6 +11,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 public class MainController {
@@ -24,8 +30,11 @@ public class MainController {
     }
 
     @GetMapping("/menu")
-    public String menu() {
-        return "menu";
+    public ModelAndView getProductsPage() {
+        Map<String, Object> model = new HashMap<>();
+        List<FoodItem> items = foodRepository.findAll();
+        model.put("items", items);
+        return new ModelAndView("menu", model);
     }
 
     @GetMapping("/contact")
