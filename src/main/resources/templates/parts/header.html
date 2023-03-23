@@ -13,7 +13,7 @@
             <a href="login">Login</a>
           </span>
           <span sec:authorize="isAuthenticated()">
-            <a href="login?logout"><span th:text="${#authentication.principal.email}"></span> (Logout)</a>
+            <a href="login?logout"><span th:text="${#authentication.principal.firstName}"></span> (Logout)</a>
           </span>
         </li>
       </ul>
