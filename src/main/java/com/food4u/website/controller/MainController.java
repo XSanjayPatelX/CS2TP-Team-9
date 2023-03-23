@@ -1,15 +1,25 @@
 package com.food4u.website.controller;
 
+import com.food4u.website.model.Cart;
+import com.food4u.website.model.CartManager;
+import com.food4u.website.repository.FoodRepository;
 import com.food4u.website.security.CustomUserDetails;
+import jakarta.servlet.http.HttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
 
-    @GetMapping("/")
-    public String home() {
+    @Autowired
+    private FoodRepository foodRepository;
+
+    @GetMapping({"/", "/index"})
+    public String home(HttpSession session) {
+        Cart c = new CartManager().getCart(session);
         return "index";
     }
 
@@ -36,6 +46,12 @@ public class MainController {
     @GetMapping("/checkout")
     public String checkout() {
         return "checkout";
+    }
+
+    @GetMapping("/shop")
+    public String shop(Model model){
+        model.addAttribute("products", foodRepository.findAll());
+        return "shop";
     }
 
     @GetMapping("/user/address")
