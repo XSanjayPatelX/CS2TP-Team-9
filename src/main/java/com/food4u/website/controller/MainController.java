@@ -1,40 +1,49 @@
 package com.food4u.website.controller;
 
-import com.food4u.website.entity.User;
-import com.food4u.website.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.food4u.website.security.CustomUserDetails;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
-    @Autowired
-    private UserRepository userRepo;
 
-    @GetMapping(value = "/products")
-    public String productPage() {
-        return "products";
+    @GetMapping("/")
+    public String home() {
+        return "index";
     }
 
-    @GetMapping(value = "/about-us")
-    public String aboutusPage() {
-        return "about-us";
+    @GetMapping("/menu")
+    public String menu() {
+        return "menu";
     }
 
-    @GetMapping(value = "/contact")
-    public String contactPage() {
+    @GetMapping("/contact")
+    public String contact() {
         return "contact";
     }
 
-    @GetMapping(value = "/login")
-    public String loginPage() {
-        return "login";
+    @GetMapping("/about-us")
+    public String about() {
+        return "about-us";
     }
 
-    @GetMapping(value = "/register")
-    public String registerPage(Model model) {
-        model.addAttribute("user", new User());
-        return "register";
+    @GetMapping("/basket")
+    public String basket() {
+        return "basket";
+    }
+
+    @GetMapping("/checkout")
+    public String checkout() {
+        return "checkout";
+    }
+
+    @GetMapping("/user/address")
+    public String getUserAddress(Authentication authentication) {
+        CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+        String address = userDetails.getPassword();
+        System.out.println(address);
+
+        return "basket";
     }
 }

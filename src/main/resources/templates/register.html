@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <link th:href="@{webjars/bootstrap/3.3.6/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/login.css}" rel="stylesheet"/>
+    <title>Register</title>
+</head>
+<body>
+<main>
+    <div class="box">
+        <div class="login-box">Register</div>
+        <form class="form" role="form" th:action="@{/register/save}" th:object="${user}" method="POST">
+            <input class="block" id="firstName" name="firstName" placeholder="Enter first name" th:field="*{firstName}" type="text" required>
+            <input class="block" id="lastName" name="lastName" placeholder="Enter last name" th:field="*{lastName}" type="text" required>
+            <input class="block" id="email" name="email" placeholder="Enter email" th:field="*{email}" type="email" required>
+            <input class="block" id="password" name="password" placeholder="Enter password" th:field="*{password}" type="password" required>
+            <input class="block" id="address1" name="address1" placeholder="Enter address line 1" th:field="*{address1}" type="text" required>
+            <input class="block" id="address2" name="address2" placeholder="Enter address line 2" th:field="*{address2}" type="text" required>
+            <input class="block" id="city" name="city" placeholder="Enter city" th:field="*{city}" type="text" required>
+            <input class="block" id="postcode" name="postcode" placeholder="Enter postcode" th:field="*{postcode}" type="text" required>
+            <button class="block" id="login-btn">Sign Up</button>
+            <p>Already a member? <a href="login">Login here</a></p>
+        </form>
+
+        <div th:if="${param.success}">
+            <div class="alert alert-info">You've successfully registered!</div>
+        </div>
+    </div>
+</main>
+<script th:src="@{webjars/jquery/1.9.1/jquery.min.js}"></script>
+<script th:src="@{webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
+</body>
+</html>

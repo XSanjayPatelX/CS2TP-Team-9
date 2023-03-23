@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/homepage.css" />
   </head>
+
   <body class="background-contact">
-    <%@ include file="parts/header.jsp" %>
+      <div th:replace="/parts/header :: header"> </div>
       <div class="nav-menu">
           <ul>
               <li>
@@ -35,7 +37,7 @@
               </li>
           </ul>
       </div>
-    </div>
+
     <!-- Code for each of the products-->
     <div class="products-list-opt">
       <div class="opt-itms">
@@ -447,7 +449,7 @@
       </div>
     </div>
     <br><br>
-    <%@ include file="parts/footer.jsp" %>
+      <div th:replace="/parts/footer :: footer"> </div>
     <script src="https://kit.fontawesome.com/c54d8b2ca0.js" crossorigin="anonymous"></script>
     <script src="js/products.js"></script>
   </body>

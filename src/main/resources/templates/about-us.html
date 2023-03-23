@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,9 @@
     <title>About FOOD4U</title>
   </head>
   <body class="background-about">
-    <!--Title 1 -About us (FOOD4U)--><%@ include file="parts/header.jsp" %> <main class="main-grid">
+    <!--Title 1 -About us (FOOD4U)-->
+    <div th:replace="/parts/header :: header"> </div>
+     <main class="main-grid">
       <div class="head">
         <h1 class="page-title">About us</h1>
         <br>
@@ -88,6 +90,7 @@
     <!--Google maps-->
     <br>
     <br>
-    </div><%@ include file="parts/footer.jsp" %>
+    </div>
+    <div th:replace="/parts/footer :: footer"> </div>
   </body>
 </html>

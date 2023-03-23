@@ -1,0 +1,46 @@
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+>
+<div th:fragment="header">
+  <div class="navigation-bar">
+    <div class="nav-logo">
+      <a href="/"><img src="images/img/banner/Fast Food Restaurant Logo (2).png" alt=""></a>
+      <ul>
+        <li>
+          <span class="fas fa-user-circle"></span>
+          <span sec:authorize="isAnonymous()">
+            <a href="login">Login</a>
+          </span>
+          <span sec:authorize="isAuthenticated()">
+            <a href="login?logout"><span th:text="${#authentication.principal.firstName}"></span> (Logout)</a>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-menu">
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="menu">Menu</a>
+        </li>
+        <li>
+          <a href="about-us">About Us</a>
+        </li>
+        <li>
+          <a href="contact">Contact Us</a>
+        </li>
+        <li>
+          <a href="basket">Basket</a>
+        </li>
+        <li>
+          <a href="checkout">Checkout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/c54d8b2ca0.js" crossorigin="anonymous"></script>
+</div>
+</html>

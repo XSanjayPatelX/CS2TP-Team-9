@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
   </head>
   <body>
     <body class="background-contact">
-    <%@ include file="parts/header.jsp" %>
+    <div th:replace="/parts/header :: header"> </div>
       <div class="form-details">
         <section id="form-details">
           <form action="">
@@ -23,7 +23,7 @@
             <button class="normal">Submit</button>
           </form>
         </section>
-        <%@ include file="parts/footer.jsp" %>
-      </div
+        <div th:replace="/parts/footer :: footer"> </div>
+      </div>
     </body>
 </html>
