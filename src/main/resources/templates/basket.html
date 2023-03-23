@@ -1,4 +1,4 @@
--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
@@ -23,6 +23,38 @@
           <div class="col align-self-center text-right text-muted">1 items</div>
         </div>
       </div>
+      <div class="row border-top border-bottom">
+        <div class="row main align-items-center">
+          <div class="col-2"><img class="img-fluid" src="img/photo-1571091718767-18b5b1457add.jpg"></div>
+          <div class="col">
+            <div class="row text-muted">Lamb Burger</div>
+            <div class="row">No Onions</div>
+          </div>
+          <div class="col">
+            <input type="number" class="quantity-selector" name="" value="1" id="">
+            <!-- <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> -->
+          </div>
+          <div class="col">&pound; 12.00 <span class="close">&#10005;</span></div>
+        </div>
+      </div>
+
+
+      <div class="row border-top border-bottom">
+        <div class="row main align-items-center">
+          <div class="col-2"><img class="img-fluid" src="img/photo-1571091718767-18b5b1457add.jpg"></div>
+          <div class="col">
+            <div class="row text-muted">Lamb Burger</div>
+            <div class="row">No Onions</div>
+          </div>
+          <div class="col">
+            <input type="number" class="quantity-selector" name="" value="1" id="">
+            <!-- <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> -->
+          </div>
+          <div class="col">&pound; 12.00 <span class="close">&#10005;</span></div>
+        </div>
+      </div>
+
+
       <div class="row border-top border-bottom">
         <div class="row main align-items-center">
           <div class="col-2"><img class="img-fluid" src="img/photo-1571091718767-18b5b1457add.jpg"></div>
@@ -69,6 +101,9 @@
     </div>
   </div>
 </div>
+<br/>
+<br/>
+<br/>
 <div th:replace="/parts/footer :: footer"> </div>
 </body>
 </html>
