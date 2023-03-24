@@ -63,7 +63,7 @@
         <div th:each="item : ${session.shoppingCart.items}">
             <div class="row border-top border-bottom">
                 <div class="row main align-items-center">
-                    <div class="col-2"><img class="img-fluid" src="img/photo-1571091718767-18b5b1457add.jpg"></div>
+                    <div class="col-2"><img class="img-fluid" th:src="@{/images/{image}(image=${item.product.image})}"></div>
                     <div class="col">
                         <div class="row text-muted"><span th:text="${item.product.name}"></span></div>
                     </div>
