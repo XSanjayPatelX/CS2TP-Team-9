@@ -1,64 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="css/product.css" />
-    <link rel="stylesheet" href="css/homepage.css" />
-  </head>
+    <link rel="stylesheet" href="/css/menu.css"/>
+    <link rel="stylesheet" href="/css/homepage.css"/>
+</head>
 
-  <body class="background-contact">
-      <div th:replace="/parts/header :: header"> </div>
-      <div class="nav-menu">
-          <ul>
-              <li>
-                <button class="opt-btn" id="our-products">Whole Menu</button>
-              </li>
-              <li>
-                <button class="opt-btn" id="specials">Specials</button>
-              </li>
-              <li>
-                <button class="opt-btn" id="vegan">Vegan</button>
-              </li>
-              <li>
-                <button class="opt-btn" id="Burgers">Burgers</button>
-              </li>
-              <li>
-                <button class="opt-btn" id="Drinks">Drinks</button>
-              </li>
-              <li>
-                <button class="opt-btn" id="Sides">Sides</button>
-              </li>
-              <li>
-                <button class="opt-btn" id="Deserts">Desserts</button>
-              </li>
-          </ul>
-      </div>
+<body class="background-contact">
+<div th:replace="/parts/header :: header"></div>
+<div class="nav-menu">
+    <ul>
+        <li>
+            <button class="opt-btn" id="product">Whole Menu</button>
+        </li>
+        <li>
+            <button class="opt-btn" id="specials">Specials</button>
+        </li>
+        <li>
+            <button class="opt-btn" id="vegan">Vegan</button>
+        </li>
+        <li>
+            <button class="opt-btn" id="burgers">Burgers</button>
+        </li>
+        <li>
+            <button class="opt-btn" id="drinks">Drinks</button>
+        </li>
+        <li>
+            <button class="opt-btn" id="sides">Sides</button>
+        </li>
+        <li>
+            <button class="opt-btn" id="desserts">Desserts</button>
+        </li>
+    </ul>
+</div>
 
-    <!-- Code for each of the products-->
-      <div class="products-list-opt">
-          <div th:each="item : ${items}" class="product ${item.category}">
-              <div class="product-img">
-                  <img th:src="@{/images/{image}(image=${item.image})}" th:alt="${item.altText}">
-              </div>
-              <div class="description">
-                  <p th:text="${item.name}"></p>
-                  <p2 th:text="${item.description}"></p2>
-                  <br>
-                  <span th:text="${#numbers.formatDecimal(item.price, 0, 'COMMA', 2, 'POINT')}"></span>
-                  <div class="stock"><span th:text="${item.stock}"></span></div>
-                  <a href="#" class="basket-btn">Add to Basket</a>
-              </div>
-          </div>
-      </div>
+<div class="products-list-opt">
+    <div th:each="item : ${items}">
+        <div th:class="'product ' + ${item.category}">
+            <div class="product-img">
+                <img th:src="@{/images/{image}(image=${item.image})}" th:alt="${item.altText}">
+            </div>
+            <div class="description">
+                <p th:text="${item.name}"></p>
+                <p2 th:text="${item.description}"></p2>
+                <br>
+                <div class="cost">&pound;<span
+                        th:text="${#numbers.formatDecimal(item.price, 0, 'COMMA', 2, 'POINT')}"></span>
+                </div>
+                <div class="stock"><span th:text="${item.stock}"></span> left</div>
+
+                <form action="#" th:action="@{/basket/add}" method="post">
+                    <input type="hidden" th:value="${item.id}" name="id"/>
+                    <button type="submit"><a class="basket-btn">Add to Basket</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-      <br><br>
-      <div th:replace="/parts/footer :: footer"> </div>
-    <script src="https://kit.fontawesome.com/c54d8b2ca0.js" crossorigin="anonymous"></script>
-    <script src="js/products.js"></script>
-  </body>
+<br><br>
+<div th:replace="/parts/footer :: footer"></div>
+<script src="https://kit.fontawesome.com/c54d8b2ca0.js" crossorigin="anonymous"></script>
+<script src="/js/products.js"></script>
+</body>
 </html>

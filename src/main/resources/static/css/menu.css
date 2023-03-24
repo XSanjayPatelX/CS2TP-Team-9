@@ -167,11 +167,7 @@ h1 {
     box-shadow: 0 5px 10px rgba(153, 21, 21, 0.4)
 }
 
-button {
-    width: 150px;
-    height: 98px;
-    padding: 35px;
-}
+
 
 .opt-btns {
     text-align: left;
@@ -186,6 +182,12 @@ button {
     text-align: left;
     font-size: 15px;
     position: relative;
+}
+
+.nav-menu button {
+    width: 150px;
+    height: 98px;
+    padding: 35px;
 }
 
 .opt-btn:hover {
@@ -203,7 +205,7 @@ button {
     width: 100%;
 }
 
-.opt-itms{
+.opt-itm{
     display: inline-block;
     display: flex;
     flex-wrap: wrap;
@@ -220,6 +222,13 @@ button {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.products-list-opt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 50px;
 }
 
 .product-img {
@@ -256,9 +265,10 @@ button {
     display: inline-block;
     text-decoration: none;
     font-weight: bold;
-    padding: 12px 10px;
-    width: 180px;
+    padding: 0px 10px;
+    width: 175px;
     height: 20px;
     color: aliceblue;
     background-color: #ffb03b;
+    cursor: pointer;
 }

@@ -1,4 +1,4 @@
-const items = document.querySelectorAll('.opt-itm');
+const items = document.querySelectorAll('.product');
 const button = document.querySelectorAll('.opt-btn');
 
 window.addEventListener('DOMContentLoaded', () => {

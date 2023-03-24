@@ -23,7 +23,7 @@ public class CartController {
                       @RequestParam(value = "qty", required = false, defaultValue = "1") int qty){
         Cart cart = cartManager.getCart(session);
         cart.addItem(product, qty);
-        return "basket";
+        return "redirect:/menu";
     }
 
     @RequestMapping("/remove")
