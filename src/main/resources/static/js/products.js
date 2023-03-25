@@ -1,5 +1,6 @@
 const items = document.querySelectorAll('.product');
 const button = document.querySelectorAll('.opt-btn');
+const itemsCopy = Array.from(items);
 
 window.addEventListener('DOMContentLoaded', () => {
     button[0].classList.add('active-btn');
@@ -12,15 +13,32 @@ function resetActiveBtn() {
 }
 
 function showFilteredContent(btn) {
-    items.forEach((item) => {
+    const itemsToShow = [];
+    itemsCopy.forEach((item) => {
         if (item.classList.contains(btn.id)) {
-            resetActiveBtn();
-            btn.classList.add('active-btn');
-            item.style.display = "block";
-        } else {
-            item.style.display = "none";
+            itemsToShow.push(item);
         }
     });
+
+    items.forEach((item) => {
+        if (itemsToShow.includes(item)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+
+        if (item.parentNode) {
+            item.parentNode.removeChild(item);
+        }
+    });
+
+    const parent = document.querySelector('.products-list-opt');
+    itemsToShow.forEach((item) => {
+        parent.appendChild(item);
+    });
+
+    resetActiveBtn();
+    btn.classList.add('active-btn');
 }
 
 button.forEach((btn) => {
@@ -28,3 +46,4 @@ button.forEach((btn) => {
         showFilteredContent(btn);
     });
 });
+
