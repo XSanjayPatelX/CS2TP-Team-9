@@ -24,7 +24,7 @@ public class OrderItem {
     private int quantity;
 
     @Column(nullable = false)
-    private float price;
+    private double price;
 
     @Column(nullable = false)
     private String category;
@@ -57,11 +57,11 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
