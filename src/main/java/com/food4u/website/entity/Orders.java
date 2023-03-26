@@ -34,8 +34,6 @@ public class Orders {
     @Column(name = "is_delivered", nullable = false)
     private boolean isDelivered;
 
-    @Column(name = "is_ordered", nullable = false)
-    private boolean isOrdered;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
     @JoinTable(
@@ -49,7 +47,6 @@ public class Orders {
         this.orderDate = orderDate;
         this.estimatedDelivery = estimatedDelivery;
         this.isDelivered = isDelivered;
-        this.isOrdered = isOrdered;
     }
 
     public int getId() {
@@ -100,13 +97,6 @@ public class Orders {
         isDelivered = delivered;
     }
 
-    public boolean isOrdered() {
-        return isOrdered;
-    }
-
-    public void setOrdered(boolean ordered) {
-        isOrdered = ordered;
-    }
 
     @Override
     public String toString() {
@@ -116,7 +106,6 @@ public class Orders {
                 ", orderDate=" + orderDate +
                 ", estimatedDelivery=" + estimatedDelivery +
                 ", isDelivered=" + isDelivered +
-                ", isOrdered=" + isOrdered +
                 '}';
     }
 }
