@@ -10,7 +10,7 @@
 <div class="container">
   <h3 class="text-white">Edit Product</h3>
   <hr/>
-  <form th:action="@{/save}" th:object="${products}" method="POST">
+  <form th:action="@{/admin/save}" th:object="${products}" method="POST">
     <input type="text" th:field="*{name}" class="form-control col-4 mb-4" placeholder="Enter Name" />
 
     <input type="text" th:field="*{price}" class="form-control col-4 mb-4" placeholder="Enter Price" />
@@ -29,7 +29,7 @@
     <input type="hidden" th:field="*{id}" />
   </form>
   <hr/>
-  <a th:href="@{/view}">Back to list</a>
+  <a th:href="@{/admin/view}">Back to list</a>
 </div>
 
 </body>
