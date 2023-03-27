@@ -14,6 +14,43 @@
           </span>
           <span sec:authorize="isAuthenticated()">
             <a href="/logout"><span th:text="${#authentication.principal.firstName}"></span> (Logout)</a>
+                <html>
+<head>
+	<title>Login/Register</title>
+	<style>
+		.navbar {
+			overflow: hidden;
+		}
+
+		.navbar a {
+			float: left;
+			color: #333;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		.navbar a.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="navbar">
+		<a class="active" href="#">Home</a>
+		<a href="#">Login</a>
+		<a href="#">Register</a>
+	</div>
+
+</body>
           </span>
         </li>
       </ul>
