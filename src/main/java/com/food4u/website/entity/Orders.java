@@ -1,5 +1,6 @@
 package com.food4u.website.entity;
 
+import com.food4u.website.security.CustomUserDetails;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,8 +22,8 @@ public class Orders {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
-    private List<OrderItem> orderItems;
+    //@OneToMany(cascade = CascadeType.ALL)
+    //private List<OrderItem> orderItems;
 
     @Column(name = "order_date", nullable = false)
     private LocalDateTime orderDate;
@@ -33,15 +34,19 @@ public class Orders {
     @Column(name = "is_delivered", nullable = false)
     private boolean isDelivered;
 
-    @Column(name = "is_ordered", nullable = false)
-    private boolean isOrdered;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+    @JoinTable(
+            name="orders_order_item",
+            joinColumns={@JoinColumn(name="ORDER_ID", referencedColumnName="ID")},
+            inverseJoinColumns={@JoinColumn(name="ORDER_ITEM_ID", referencedColumnName="ID")})
+    private List<OrderItem> orderItems;
 
     public Orders(User user, LocalDateTime orderDate, LocalDateTime estimatedDelivery, boolean isDelivered, boolean isOrdered) {
         this.user = user;
         this.orderDate = orderDate;
         this.estimatedDelivery = estimatedDelivery;
         this.isDelivered = isDelivered;
-        this.isOrdered = isOrdered;
     }
 
     public int getId() {
@@ -92,13 +97,6 @@ public class Orders {
         isDelivered = delivered;
     }
 
-    public boolean isOrdered() {
-        return isOrdered;
-    }
-
-    public void setOrdered(boolean ordered) {
-        isOrdered = ordered;
-    }
 
     @Override
     public String toString() {
@@ -108,7 +106,6 @@ public class Orders {
                 ", orderDate=" + orderDate +
                 ", estimatedDelivery=" + estimatedDelivery +
                 ", isDelivered=" + isDelivered +
-                ", isOrdered=" + isOrdered +
                 '}';
     }
 }
