@@ -46,4 +46,19 @@ public class FoodItemController {
         mav.addObject("products", foodItems);
         return mav;
     }
+
+    @GetMapping("/delete")
+    public String delete(@RequestParam Integer id) {
+        repository.deleteById(id);
+        return "redirect:/view";
+    }
+
+    @GetMapping("/newProduct")
+    public ModelAndView showUpdateForm(){
+        ModelAndView mav = new ModelAndView("update-product");
+        mav.addObject("title", "Add a new product");
+        FoodItem foodItem = new FoodItem();
+        mav.addObject("products",foodItem);
+        return mav;
+    }
 }

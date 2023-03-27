@@ -11,10 +11,7 @@
   <h3 class="text-white">Edit Product</h3>
   <hr/>
   <form th:action="@{/save}" th:object="${products}" method="POST">
-
-    <input type="text" readonly th:field="*{id}" class="form-control col-4 mb-4" placeholder="Enter ID" />
-
-    <input type="text" th:field="*{food}" class="form-control col-4 mb-4" placeholder="Enter Name" />
+    <input type="text" th:field="*{name}" class="form-control col-4 mb-4" placeholder="Enter Name" />
 
     <input type="text" th:field="*{price}" class="form-control col-4 mb-4" placeholder="Enter Price" />
 
@@ -27,10 +24,6 @@
     <input type="text" th:field="*{stock}" class="form-control col-4 mb-4" placeholder="Enter Stock" />
 
     <input type="text" th:field="*{altText}" class="form-control col-4 mb-4" placeholder="Enter Alt Text" />
-
-    <input type="text" readonly th:field="*{createdAt}" class="form-control col-4 mb-4" placeholder="" />
-
-    <input type="text" readonly th:field="*{updatedAt}" class="form-control col-4 mb-4" placeholder="" />
 
     <button type="submit" class="btn btn-info col-2">Save</button>
     <input type="hidden" th:field="*{id}" />
