@@ -44,6 +44,9 @@
                 <td th:text="${user.firstName}"></td>
                 <td th:text="${user.lastName}"></td>
                 <td th:text="${user.email}"></td>
+                <td>
+                    <a th:href="@{/admin/users/{email}(email=${user.email})}">View User</a>
+                </td>
             </tr>
         </tbody>
     </table>
