@@ -25,14 +25,6 @@ public class FoodItemController {
     @Autowired
     private FoodRepository repository;
 
-    //@GetMapping("/admin/view")
-    //public ModelAndView getProducts(HttpSession session) {
-        //Map<String, Object> model = new HashMap<String, Object>();
-        //List<FoodItem> myList = repository.findAll();
-        //model.put("products", myList );
-        //return new ModelAndView("edit-product", model);
-    //}
-
     @GetMapping("/admin/view")
     public ModelAndView getProducts(HttpSession session, String keyword) {
         if(keyword != null){
