@@ -17,10 +17,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 main {
-  display:flex;
+  display: block;
   justify-content: center;
   align-items: center;
   width:100%;
