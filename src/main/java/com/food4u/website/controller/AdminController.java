@@ -8,12 +8,12 @@ import com.food4u.website.repository.OrderRepository;
 import com.food4u.website.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -51,6 +51,19 @@ public class AdminController {
         return new ModelAndView("view-order", model);
     }
 
+    @PostMapping("/orders/{id}/update")
+    public String updateOrder(@ModelAttribute Orders order) {
+        Orders updatedOrder = orderRepository.findById(order.getId());
+
+        updatedOrder.setTotal(order.getTotal());
+        updatedOrder.setIsDelivered(order.getIsDelivered());
+        updatedOrder.setEstimatedDelivery(order.getEstimatedDelivery());
+
+        orderRepository.save(updatedOrder);
+
+        return "redirect:/admin/orders/" + order.getId();
+    }
+
     @RequestMapping("/users")
     public ModelAndView users() {
         Map<String, Object> model = new HashMap<String, Object>();
@@ -59,10 +72,10 @@ public class AdminController {
         return new ModelAndView("users", model);
     }
 
-    @GetMapping("/users/{email}")
-    public ModelAndView viewUser(@PathVariable("email") String email) {
+    @GetMapping("/users/{id}")
+    public ModelAndView viewUser(@PathVariable("id") int id) {
         Map<String, Object> model = new HashMap<String, Object>();
-        model.put("user", userRepository.findByEmail(email));
+        model.put("user", userRepository.findById(id));
 
 
         return new ModelAndView("view-user", model);

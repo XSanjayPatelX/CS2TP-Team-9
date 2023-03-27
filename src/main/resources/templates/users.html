@@ -37,6 +37,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
+                <th>Manage User</th>
             </tr>
         </thead>
         <tbody>
@@ -45,7 +46,9 @@
                 <td th:text="${user.lastName}"></td>
                 <td th:text="${user.email}"></td>
                 <td>
-                    <a th:href="@{/admin/users/{email}(email=${user.email})}">View User</a>
+                    <form method=get th:action="@{/admin/users/} + ${user.id}">
+                        <input type="submit" value="Manage" />
+                    </form>
                 </td>
             </tr>
         </tbody>

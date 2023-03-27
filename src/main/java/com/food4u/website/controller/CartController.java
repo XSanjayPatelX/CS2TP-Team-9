@@ -77,7 +77,7 @@ public class CartController {
 
             order.setOrderDate(now);
             order.setEstimatedDelivery(now.plusHours(1));
-            order.setDelivered(false);
+            order.setIsDelivered(false);
             order.setUser(user);
             order.setTotal((float) cart.getTotal());
 

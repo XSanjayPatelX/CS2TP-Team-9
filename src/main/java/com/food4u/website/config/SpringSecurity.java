@@ -32,7 +32,7 @@ public class SpringSecurity {
                                 .requestMatchers(req -> req.getRequestURI().matches("/register.*")).permitAll()
                                 .requestMatchers(req -> req.getRequestURI().matches("/(index|menu|contact|about-us|/)?")).permitAll()
                                 .requestMatchers(req -> req.getRequestURI().matches("/(css|js|images|webjars)/.*")).permitAll()
-                                .requestMatchers(req -> req.getRequestURI().matches("/(users|view|updateproduct)?")).hasRole("ADMIN")
+                                .requestMatchers(req -> req.getRequestURI().matches("/admin.*")).hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 ).formLogin(
                         form -> form

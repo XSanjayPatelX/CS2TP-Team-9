@@ -91,11 +91,11 @@ public class Orders {
         this.estimatedDelivery = estimatedDelivery;
     }
 
-    public boolean isDelivered() {
+    public boolean getIsDelivered() {
         return isDelivered;
     }
 
-    public void setDelivered(boolean delivered) {
+    public void setIsDelivered(boolean delivered) {
         isDelivered = delivered;
     }
 

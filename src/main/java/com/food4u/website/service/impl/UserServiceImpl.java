@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
         user.setJoinDate(new java.sql.Date(Calendar.getInstance().getTimeInMillis()));
 
         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
-        Role role = roleRepository.findByName("ROLE_ADMIN");
+        Role role = roleRepository.findByName("ROLE_CUSTOMER");
         if(role == null){
             role = checkRoleExist();
         }
@@ -71,8 +71,14 @@ public class UserServiceImpl implements UserService {
     }
 
     private Role checkRoleExist() {
-        Role role = new Role();
-        role.setName("ROLE_ADMIN");
-        return roleRepository.save(role);
+        Role admin = new Role();
+        admin.setName("ROLE_ADMIN");
+
+        Role customer = new Role();
+        customer.setName("ROLE_CUSTOMER");
+
+        roleRepository.save(admin);
+
+        return roleRepository.save(customer);
     }
 }

@@ -56,6 +56,34 @@
             </tbody>
         </table>
 
+        <form method="post" class="row gy-2 gx-3 align-items-center" action="#" th:object="${order}" th:action="@{/admin/orders/} + ${order.user.id} + '/update'">
+            <div class="form-group row">
+                <div class="col-xs-2">
+                    <input hidden="hidden" th:value="${order.user.id}" th:field="*{id}">
+                    <label for="total">Total:</label>
+                    <input class="form-control" th:value="${order.total}" id="total" type="number" step="0.01" style="width:10em;" th:field="*{total}">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="form-check">
+                    <input th:if="${order.isDelivered}" class="form-check-input" type="checkbox" th:value="1" id="delivered" th:field="*{isDelivered}" checked />
+                    <input th:unless="${order.isDelivered}" class="form-check-input" type="checkbox" th:value="0" id="delivered" th:field="*{isDelivered}"/>
+                    <label class="form-check-label" for="delivered"> Mark as delivered </label>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="form-check">
+                    <label for="estimated">Estimated delivery: </label>
+                    <input type="datetime-local" th:value="${{order.estimatedDelivery}}" id="estimated" th:field="*{estimatedDelivery}">
+                </div>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary" id="update-order">Update</button>
+            </div>
+        </form>
+
+        <div></br></div>
+
         <table class="table table-striped table-bordered table-hover">
             <thead class="table-dark">
             <tr>
@@ -89,10 +117,10 @@
             </tbody>
         </table>
 
-        <h2>Showing items for ORDER #<a th:text="${order.id}"></a></h2>
+        <h2>Showing items for order #<a th:text="${order.id}"></a></h2>
 
         <div class="row">
-            <div class="col-xl-4" th:each="item : ${items}">
+            <div class="col-sm-4" th:each="item : ${items}">
                 <div class="card" style="width: 18rem;">
                     <img th:src="@{/images/{image}(image=${item.foodItem.image})}" class="card-img-top"
                          th:alt="${item.foodItem.altText}">
