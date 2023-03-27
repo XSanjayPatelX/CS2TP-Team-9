@@ -79,6 +79,7 @@ public class CartController {
             order.setEstimatedDelivery(now.plusHours(1));
             order.setDelivered(false);
             order.setUser(user);
+            order.setTotal((float) cart.getTotal());
 
             Orders savedOrder = orderRepository.save(order);
 
@@ -93,6 +94,7 @@ public class CartController {
                 orderItem.setPrice(foodItem.getPrice());
                 orderItem.setCategory(foodItem.getCategory());
                 orderItem.setName(foodItem.getName());
+                orderItem.setFoodItem(foodItem);
 
                 orderItemRepository.save(orderItem);
                 orderItemRepository.flush();

@@ -34,6 +34,8 @@ public class Orders {
     @Column(name = "is_delivered", nullable = false)
     private boolean isDelivered;
 
+    @Column(nullable = false)
+    private float total;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
     @JoinTable(
@@ -97,6 +99,13 @@ public class Orders {
         isDelivered = delivered;
     }
 
+    public float getTotal() {
+        return total;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
+    }
 
     @Override
     public String toString() {

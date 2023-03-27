@@ -1,12 +1,15 @@
 package com.food4u.website.entity;
 
+import com.food4u.website.repository.FoodRepository;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -15,7 +18,6 @@ import java.sql.Date;
 @Entity
 @Table(name="food_item")
 public class FoodItem {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -46,4 +48,6 @@ public class FoodItem {
 
     @Column(nullable=true, name="updated_at")
     private Date updatedAt;
+
+
 }

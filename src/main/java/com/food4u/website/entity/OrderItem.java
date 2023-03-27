@@ -1,10 +1,12 @@
 package com.food4u.website.entity;
 
+import com.food4u.website.repository.OrderItemRepository;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Getter
 @Setter
@@ -13,6 +15,7 @@ import lombok.Setter;
 @Entity
 @Table(name="order_item")
 public class OrderItem {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -29,9 +32,29 @@ public class OrderItem {
     @Column(nullable = false)
     private String category;
 
+    public Orders getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Orders orders) {
+        this.orders = orders;
+    }
+
     @ManyToOne
     @JoinColumn(name = "order_id", referencedColumnName = "id")
     private Orders orders;
+
+    @ManyToOne
+    @JoinColumn(name = "food_item_id", referencedColumnName = "id")
+    private FoodItem foodItem;
+
+    public FoodItem getFoodItem() {
+        return foodItem;
+    }
+
+    public void setFoodItem(FoodItem foodItem) {
+        this.foodItem = foodItem;
+    }
 
     public int getId() {
         return id;
@@ -91,4 +114,5 @@ public class OrderItem {
                 ", category='" + category + '\'' +
                 '}';
     }
+
 }
