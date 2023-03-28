@@ -102,6 +102,10 @@
   text-decoration: none!important;
 }
 
+.basket-icon a {
+    margin-top: 190px;
+}
+
 .main-text-container{
     color: white;
     text-align: center;
