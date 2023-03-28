@@ -60,6 +60,16 @@
         <label for="postcode" class="form-label">Postcode</label>
         <input type="text" class="form-control" id="postcode" th:field="*{postcode}">
       </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">New password (leave empty to keep the same)</label>
+        <input type="password" class="form-control" id="password" th:field="*{password}">
+      </div>
+      <div class="mb-3">
+<!--        <label for="admin" class="form-label">Set admin</label>-->
+<!--        <input type="text" class="form-control" id="admin" th:field="*{admin}">-->
+        <input class="form-check-input" type="checkbox" name="admin" id="admin" th:checked="${admin}"/>
+        <label class="form-check-label" for="admin">Set as admin</label>
+      </div>
       <input type="submit" value="Save Changes" />
     </form>
   </div>

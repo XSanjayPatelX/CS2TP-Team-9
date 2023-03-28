@@ -1,12 +1,12 @@
 package com.food4u.website.controller;
 
 import com.food4u.website.entity.Orders;
+import com.food4u.website.entity.Role;
 import com.food4u.website.entity.User;
-import com.food4u.website.repository.FoodRepository;
-import com.food4u.website.repository.OrderItemRepository;
-import com.food4u.website.repository.OrderRepository;
-import com.food4u.website.repository.UserRepository;
+import com.food4u.website.repository.*;
+import com.food4u.website.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,9 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 @RequestMapping("/admin")
@@ -33,6 +31,18 @@ public class AdminController {
 
     @Autowired
     private UserRepository userRepository;
+
+    private PasswordEncoder passwordEncoder;
+
+    private UserService userService;
+
+    private RoleRepository roleRepository;
+
+    public AdminController(PasswordEncoder passwordEncoder, UserService userService, RoleRepository roleRepository) {
+        this.passwordEncoder = passwordEncoder;
+        this.userService = userService;
+        this.roleRepository = roleRepository;
+    }
 
     @RequestMapping("/orders")
     public ModelAndView orders() {
@@ -75,14 +85,17 @@ public class AdminController {
     @GetMapping("/users/{id}")
     public ModelAndView viewUser(@PathVariable("id") int id) {
         Map<String, Object> model = new HashMap<String, Object>();
-        model.put("user", userRepository.findById(id));
 
+        User user = userRepository.findById(id);
+
+        model.put("user", user);
+        model.put("admin", user.getRoles().stream().anyMatch(a -> a.getName().equals("ROLE_ADMIN")));
 
         return new ModelAndView("view-user", model);
     }
 
     @PostMapping("/users/{id}/edit")
-    public String updateUser(@PathVariable("id") int id, @ModelAttribute User updatedUser) {
+    public String updateUser(@PathVariable("id") int id, @ModelAttribute User updatedUser, @RequestParam(value = "admin", required = false) String admin) {
         User user = userRepository.findById(id);
         user.setFirstName(updatedUser.getFirstName());
         user.setLastName(updatedUser.getLastName());
@@ -91,6 +104,21 @@ public class AdminController {
         user.setAddress2(updatedUser.getAddress2());
         user.setCity(updatedUser.getCity());
         user.setPostcode(updatedUser.getPostcode());
+
+        if (!updatedUser.getPassword().isEmpty()) {
+            user.setPassword(passwordEncoder.encode(updatedUser.getPassword()));
+        }
+
+        Role role = null;
+        if (admin != null) {
+            role = roleRepository.findByName("ROLE_ADMIN");
+        } else {
+            role = roleRepository.findByName("ROLE_CUSTOMER");
+        }
+        List<Role> list = new LinkedList<Role>(Arrays.asList(role));
+        if (role != null)
+            user.setRoles(list);
+
         userRepository.save(user);
         return "redirect:/admin/users/" + id;
     }
