@@ -80,4 +80,26 @@ public class AdminController {
 
         return new ModelAndView("view-user", model);
     }
+
+    @PostMapping("/users/{id}/edit")
+    public String updateUser(@PathVariable("id") int id, @ModelAttribute User updatedUser) {
+        User user = userRepository.findById(id);
+        user.setFirstName(updatedUser.getFirstName());
+        user.setLastName(updatedUser.getLastName());
+        user.setEmail(updatedUser.getEmail());
+        user.setAddress1(updatedUser.getAddress1());
+        user.setAddress2(updatedUser.getAddress2());
+        user.setCity(updatedUser.getCity());
+        user.setPostcode(updatedUser.getPostcode());
+        userRepository.save(user);
+        return "redirect:/admin/users/" + id;
+    }
+
+    @GetMapping("/users/{id}/edit")
+    public ModelAndView editUser(@PathVariable("id") int id) {
+        Map<String, Object> model = new HashMap<>();
+        User user = userRepository.findById(id);
+        model.put("user", user);
+        return new ModelAndView("edit-user", model);
+    }
 }
