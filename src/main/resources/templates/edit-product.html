@@ -20,7 +20,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" th:href="@{/admin/newProduct}">Add Product</a>
+            <a class="nav-link active"  th:href="@{/admin/orders}">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" th:href="@{/admin/users}">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  th:href="@{/admin/view}">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:href="@{/logout}">Logout</a>
           </li>
         </ul>
       </div>
@@ -28,6 +37,7 @@
   </nav>
   <!-- End of navbar -->
   <body class="bg-dark">
+  <a class="nav-link" th:href="@{/admin/newProduct}">Add Product</a>
   <div th:each="product : ${products}">
     <div th:if="${product.stock < 50}" class="mx-2 mt-3">
       <div class="alert alert-success alert-dismissible" role="alert">
