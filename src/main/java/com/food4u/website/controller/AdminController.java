@@ -128,6 +128,7 @@ public class AdminController {
         Map<String, Object> model = new HashMap<>();
         User user = userRepository.findById(id);
         model.put("user", user);
+        model.put("admin", user.getRoles().stream().anyMatch(a -> a.getName().equals("ROLE_ADMIN")));
         return new ModelAndView("edit-user", model);
     }
 }
