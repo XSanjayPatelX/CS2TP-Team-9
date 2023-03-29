@@ -14,42 +14,6 @@
 </head>
 <body>
 <div th:replace="/parts/header :: header"> </div>
-
-<!--<span th:text="${session.shoppingCart.getTotalQuantity}"></span> items($<span th:text="${session.shoppingCart.total}"></span>)-->
-<!--<table border="1">-->
-<!--  <thead>-->
-<!--  <tr>-->
-<!--    <th>#</th>-->
-<!--    <th>name</th>-->
-<!--    <th>price</th>-->
-<!--    <th>quantity</th>-->
-<!--    <th>subtotal</th>-->
-<!--    <th>remove</th>-->
-<!--  </tr>-->
-<!--  </thead>-->
-<!--  <tbody>-->
-<!--  <tr th:each="item : ${session.shoppingCart.items}">-->
-<!--    <td th:text="${item.product.id}"></td>-->
-<!--    <td th:text="${item.product.name}"></td>-->
-<!--    <td>Rs.<span th:text="${item.product.price}"></span></td>-->
-<!--    <td>-->
-<!--      <form action="#" th:action="@{/basket/update}" method="post">-->
-<!--        <input type="hidden" th:value="${item.product.id}" name="id"/>-->
-<!--        <input type="number" min="1" th:value="${item.quantity}" name="qty"/>-->
-<!--        <button type="submit">update</button>-->
-<!--      </form>-->
-<!--    </td>-->
-<!--    <td>Rs.<span th:text="${item.subTotal}"></span></td>-->
-<!--    <td>-->
-<!--      <form action="#" th:action="@{/basket/remove}" method="post">-->
-<!--        <input type="hidden" th:value="${item.product.id}" name="id"/>-->
-<!--        <button type="submit">remove</button>-->
-<!--      </form>-->
-<!--    </td>-->
-<!--  </tr>-->
-<!--  </tbody>-->
-<!--</table>-->
-
 <div class="card">
   <div class="row">
     <div class="col-md-8 cart">
@@ -105,7 +69,7 @@
       </form>
       <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
         <div class="col">TOTAL PRICE</div>
-        <div class="col text-right">&pound; <span th:text="${session.shoppingCart.total}"></span></div>
+        <div class="col text-right">&pound; <span th:text="${#numbers.formatDecimal(session.shoppingCart.total, 1, 'COMMA', 2, 'POINT')}"></span></div>
       </div>
       <a href="/basket/checkout"><button class="btn">CHECKOUT</button></a>
     </div>

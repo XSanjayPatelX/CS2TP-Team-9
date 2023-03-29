@@ -17,17 +17,10 @@
           </span>
         </li>
       </ul>
-      <div class="admin-icon">
+      <div class="admin-icon" sec:authorize="hasRole('ADMIN')">
         <ul>
           <li>
-            <a class="fa-sharp fa-solid fa-screwdriver-wrench" href="/admin"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="basket-icon">
-        <ul>
-          <li>
-            <a class="fa-solid fa-basket-shopping" href="/basket"></a>
+            <a class="fa-sharp fa-solid fa-screwdriver-wrench" href="/admin/orders"></a>
           </li>
         </ul>
       </div>
@@ -45,6 +38,9 @@
         </li>
         <li>
           <a href="/contact">Contact Us</a>
+        </li>
+        <li>
+          <a href="/basket">Basket</a>
         </li>
       </ul>
     </div>
